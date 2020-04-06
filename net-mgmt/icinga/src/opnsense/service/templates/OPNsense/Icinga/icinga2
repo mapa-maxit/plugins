@@ -1,7 +1,6 @@
-{% if helpers.exists('OPNsense.muninnode.general.enabled') and OPNsense.muninnode.general.enabled == '1' %}
-munin_node_var_script="/usr/local/opnsense/scripts/OPNsense/Muninnode/setup.sh"
-munin_node_enable="YES"
+{% if helpers.exists('OPNsense.icinga.general.enabled') and OPNsense.icinga.general.enabled == '1' %}
+icinga2_var_script="/usr/local/opnsense/scripts/OPNsense/Icinga/setup.sh"
+icinga2_enable="YES"
 {% else %}
-munin_node_enable="NO"
+icinga2_enable="NO"
 {% endif %}
-munin_node_var_mfs="/var/cache/munin_node /var/db/munin_node /var/log/munin_node"
