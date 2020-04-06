@@ -1,0 +1,2 @@
+icinga2:/etc/rc.conf.d/icinga2
+zones.conf:/usr/local/etc/icinga2/zones.conf

@@ -1,0 +1,7 @@
+<menu>
+  <Services>
+    <Iginga cssClass="fa fa-pie-chart">
+      <General url="/ui/icinga/general/index"/>
+    </Icinga>
+  </Services>
+</menu>

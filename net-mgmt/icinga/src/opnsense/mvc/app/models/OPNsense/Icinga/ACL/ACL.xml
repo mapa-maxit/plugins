@@ -1,0 +1,9 @@
+<acl>
+   <page-services-icinga>
+      <name>Services: Icinga</name>
+      <patterns>
+         <pattern>ui/icinga/*</pattern>
+         <pattern>api/icinga/*</pattern>
+      </patterns>
+   </page-services-icinga>
+</acl>

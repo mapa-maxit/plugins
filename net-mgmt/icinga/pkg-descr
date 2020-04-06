@@ -1,0 +1,8 @@
+Icinga is a monitoring system which checks the availability of
+your network resources, notifies users of outages, and generates
+performance data for reporting.
+
+Scalable and extensible, Icinga can monitor large, complex
+environments across multiple locations.
+
+WWW: http://www.icinga.org/icinga2/
