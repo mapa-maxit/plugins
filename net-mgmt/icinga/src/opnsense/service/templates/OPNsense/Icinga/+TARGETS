@@ -1,2 +1,4 @@
 icinga2:/etc/rc.conf.d/icinga2
 zones.conf:/usr/local/etc/icinga2/zones.conf
+features-api.conf:/usr/local/etc/icinga2/features-enabled/api.conf
+features-notification.conf:/usr/local/etc/icinga2/features-enabled/notification.conf

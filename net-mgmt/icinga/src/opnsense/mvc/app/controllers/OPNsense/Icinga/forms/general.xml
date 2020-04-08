@@ -5,4 +5,10 @@
         <type>checkbox</type>
         <help>Enable Icinga daemon.</help>
     </field>
+    <field>
+        <id>general.satellite</id>
+        <label>Satellite Mode</label>
+        <type>checkbox</type>
+        <help>Enable Icinga satellite mode. This will enable the API mode and disable local notifications.</help>
+    </field>
 </form>
