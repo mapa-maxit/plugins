@@ -1,7 +1,7 @@
 <model>
     <mount>//OPNsense/unboundplus/dot</mount>
     <description>Unbound DNS over TLS configuration</description>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <items>
         <dots>
             <dot type="ArrayField">
