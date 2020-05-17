@@ -15,7 +15,7 @@
                 <port type="PortField">
                     <Required>Y</Required>
                 </port>
-                <verify type="HostnametField">
+                <verify type="HostnameField">
                     <Required>N</Required>
                 </verify>
             </dot>
