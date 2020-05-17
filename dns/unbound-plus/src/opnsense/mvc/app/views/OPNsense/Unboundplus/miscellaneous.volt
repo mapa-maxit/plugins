@@ -64,7 +64,7 @@
         </table>
         <div class="col-md-12">
             <hr />
-            <button class="btn btn-primary"  id="saveAct_upstream" type="button"><b>{{ lang._('Save') }}</b><i id="saveAct_upstream_progress"></i></button>
+            <button class="btn btn-primary"  id="saveAct_dot" type="button"><b>{{ lang._('Save') }}</b><i id="saveAct_dot_progress"></i></button>
             <br /><br />
         </div>
     </div>
@@ -81,12 +81,12 @@
         });
 
         $("#grid-upstream").UIBootgrid(
-            {   'search':'/api/unboundplus/upstream/searchDot',
-                'get':'/api/unboundplus/upstream/getDot/',
-                'set':'/api/unboundplus/upstream/setDot/',
-                'add':'/api/unboundplus/upstream/addDot/',
-                'del':'/api/unboundplus/upstream/delDot/',
-                'toggle':'/api/unboundplus/upstream/toggleDot/'
+            {   'search':'/api/unboundplus/dot/searchDot',
+                'get':'/api/unboundplus/dot/getDot/',
+                'set':'/api/unboundplus/dot/setDot/',
+                'add':'/api/unboundplus/dot/addDot/',
+                'del':'/api/unboundplus/dot/delDot/',
+                'toggle':'/api/unboundplus/dot/toggleDot/'
             }
         );
 
@@ -100,7 +100,7 @@
         });
 
         $("#saveAct").click(function(){
-            saveFormToEndpoint(url="/api/unboundplus/upstream/set", formid='frm_upstream_settings',callback_ok=function(){
+            saveFormToEndpoint(url="/api/unboundplus/dot/set", formid='frm_dot_settings',callback_ok=function(){
                 $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(url="/api/unboundplus/service/reloadunbound", sendData={}, callback=function(data,status) {
                     $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
