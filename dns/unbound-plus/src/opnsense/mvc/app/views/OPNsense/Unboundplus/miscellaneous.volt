@@ -27,7 +27,7 @@
 
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
     <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
-    <li><a data-toggle="tab" href="#upstream">{{ lang._('Upstream DNS') }}</a></li>
+    <li><a data-toggle="tab" href="#upstream">{{ lang._('Dot DNS') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content">
@@ -41,11 +41,10 @@
         </div>
     </div>
     <div id="upstream" class="tab-pane fade in">
-        <table id="grid-upstream" class="table table-responsive" data-editDialog="dialogEditUnboundplusUpstream">
+        <table id="grid-upstream" class="table table-responsive" data-editDialog="dialogEditUnboundplusDot">
             <thead>
                 <tr>
                     <th data-column-id="enable" data-type="string" data-formatter="rowtoggle">{{ lang._('Enable') }}</th>
-                    <th data-column-id="type" data-type="string" data-visible="true">{{ lang._('Type') }}</th>
                     <th data-column-id="server" data-type="string" data-visible="true">{{ lang._('Server IP') }}</th>
                     <th data-column-id="port" data-type="string" data-visible="true">{{ lang._('Server Port') }}</th>
                     <th data-column-id="uuid" data-type="string" data-identifier="true" data-visible="false">{{ lang._('ID') }}</th>
@@ -71,7 +70,7 @@
     </div>
 </div>
 
-{{ partial("layout_partials/base_dialog",['fields':formDialogEditUnboundplusUpstream,'id':'dialogEditUnboundplusUpstream','label':lang._('Edit Upstream DNS')])}}
+{{ partial("layout_partials/base_dialog",['fields':formDialogEditUnboundplusDot,'id':'dialogEditUnboundplusDot','label':lang._('Edit Dot DNS')])}}
     
 <script>
     $(function() {
@@ -82,12 +81,12 @@
         });
 
         $("#grid-upstream").UIBootgrid(
-            {   'search':'/api/unboundplus/upstream/searchUpstream',
-                'get':'/api/unboundplus/upstream/getUpstream/',
-                'set':'/api/unboundplus/upstream/setUpstream/',
-                'add':'/api/unboundplus/upstream/addUpstream/',
-                'del':'/api/unboundplus/upstream/delUpstream/',
-                'toggle':'/api/unboundplus/upstream/toggleUpstream/'
+            {   'search':'/api/unboundplus/upstream/searchDot',
+                'get':'/api/unboundplus/upstream/getDot/',
+                'set':'/api/unboundplus/upstream/setDot/',
+                'add':'/api/unboundplus/upstream/addDot/',
+                'del':'/api/unboundplus/upstream/delDot/',
+                'toggle':'/api/unboundplus/upstream/toggleDot/'
             }
         );
 
