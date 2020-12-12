@@ -8,6 +8,12 @@
                 <help>Enable or disable the nut service.</help>
             </field>
             <field>
+                <id>nut.general.enableemail</id>
+                <label>Enable Mail Notification</label>
+                <type>checkbox</type>
+                <help>Enable or disable mail notification for NUT. It requires an existing mail setup like Postfix.</help>
+            </field>
+            <field>
                 <id>nut.general.mode</id>
                 <label>Service Mode</label>
                 <type>dropdown</type>
