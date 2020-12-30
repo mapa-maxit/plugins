@@ -44,10 +44,10 @@ $key_pem_content = '';
 $ca_pem_filename = '/var/lib/icinga2/certs/ca_opn.crt';
 $ca_pem_content = '';
 
-// traverse Postfix plugin for certficiates
+// traverse Icinga plugin for certficiates
 $configObj = Config::getInstance()->object();
-if (isset($configObj->OPNsense->postfix)) {
-    foreach ($configObj->OPNsense->postfix->children() as $find_cert) {
+if (isset($configObj->OPNsense->icinga)) {
+    foreach ($configObj->OPNsense->icinga->children() as $find_cert) {
         $cert_refid = (string)$find_cert->certificate;
         // if eap has a certificate attached, search for its contents
         if ($cert_refid != "") {
