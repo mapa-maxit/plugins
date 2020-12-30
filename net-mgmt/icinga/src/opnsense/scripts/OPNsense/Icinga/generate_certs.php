@@ -41,7 +41,7 @@ $cert_pem_content = '';
 $key_pem_filename = '/var/lib/icinga2/certs/cert_opn.key';
 $key_pem_content = '';
 
-$ca_pem_filename = '/var/lib/icinga2/certs/ca_opn.crt';
+$ca_pem_filename = '/var/lib/icinga2/certs/ca.crt';
 $ca_pem_content = '';
 
 // traverse Icinga plugin for certficiates
