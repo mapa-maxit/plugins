@@ -9,3 +9,5 @@ for DIR in ${ICINGA_DIRS}; do
 	chmod -R 750 ${DIR}
 	chown -R ${ICINGA_USER}:${ICINGA_GROUP} ${DIR}
 done
+
+/bin/sh /usr/local/opnsense/scripts/OPNsense/Icinga/generate_certs.php
