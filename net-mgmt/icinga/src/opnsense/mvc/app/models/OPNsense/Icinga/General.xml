@@ -11,5 +11,13 @@
             <default>0</default>
             <Required>Y</Required>
         </satellite>
+        <certificate type="CertificateField">
+            <Type>cert</Type>
+            <Required>N</Required>
+        </certificate>
+        <ca type="CertificateField">
+            <Type>ca</Type>
+            <Required>N</Required>
+        </ca>
     </items>
 </model>
