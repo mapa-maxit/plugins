@@ -10,4 +10,4 @@ for DIR in ${ICINGA_DIRS}; do
 	chown -R ${ICINGA_USER}:${ICINGA_GROUP} ${DIR}
 done
 
-/bin/sh /usr/local/opnsense/scripts/OPNsense/Icinga/generate_certs.php
+/usr/local/bin/php /usr/local/opnsense/scripts/OPNsense/Icinga/generate_certs.php
