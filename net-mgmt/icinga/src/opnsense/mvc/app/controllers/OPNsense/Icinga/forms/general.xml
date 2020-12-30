@@ -11,4 +11,16 @@
         <type>checkbox</type>
         <help>Enable Icinga satellite mode. This will enable the API mode and disable local notifications.</help>
     </field>
+    <field>
+        <id>general.certificate</id>
+        <label>Certificate</label>
+        <type>dropdown</type>
+        <help>Choose the certificate to use when servers want to do TLS with you.</help>
+    </field>
+    <field>
+        <id>general.ca</id>
+        <label>Root CA</label>
+        <type>dropdown</type>
+        <help>Choose the Certificate Authority which signed your certificate.</help>
+    </field>
 </form>
