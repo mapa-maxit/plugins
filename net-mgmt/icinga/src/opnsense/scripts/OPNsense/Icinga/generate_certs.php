@@ -35,13 +35,13 @@ require_once("legacy_bindings.inc");
 
 use OPNsense\Core\Config;
 
-$cert_pem_filename = '/var/lib/icinga2/certs/cert_opn.crt';
+$cert_pem_filename = "/var/lib/icinga2/certs/" . $config['system']['hostname'] . "." . $config['system']['domain'] . "." . "crt";
 $cert_pem_content = '';
 
-$key_pem_filename = '/var/lib/icinga2/certs/cert_opn.key';
+$key_pem_filename = "/var/lib/icinga2/certs/" . $config['system']['hostname'] . "." . $config['system']['domain'] . "." . "key";
 $key_pem_content = '';
 
-$ca_pem_filename = '/var/lib/icinga2/certs/ca.crt';
+$ca_pem_filename = '/var/lib/icinga2/certs/ca_opn.crt';
 $ca_pem_content = '';
 
 // traverse Icinga plugin for certficiates
@@ -62,7 +62,7 @@ if (isset($configObj->OPNsense->icinga)) {
 
                     $pem_content .= "\n";
                     $cert_pem_content .= $pem_content;
-                    
+
                     $pem_content_key .= trim(str_replace(
                         "\n\n",
                         "\n",
