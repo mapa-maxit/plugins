@@ -71,7 +71,6 @@
         <div class="col-md-12">
             <hr />
             <button class="btn btn-primary" id="saveAct_client" type="button"><b>{{ lang._('Apply') }}</b> <i id="saveAct_client_progress"></i></button>
-            <button class="btn pull-right" id="reloadAct" type="button"><b>{{ lang._('Reload') }}</b> <i id="reloadAct_progress" class=""></i></button>
             <br /><br />
         </div>
     </div>
@@ -101,7 +100,6 @@
         <div class="col-md-12">
             <hr />
             <button class="btn btn-primary" id="saveAct_server" type="button"><b>{{ lang._('Apply') }}</b> <i id="saveAct_server_progress"></i></button>
-            <button class="btn pull-right" id="reloadAct" type="button"><b>{{ lang._('Reload') }}</b> <i id="reloadAct_progress" class=""></i></button>
             <br /><br />
         </div>
     </div>
