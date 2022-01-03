@@ -191,9 +191,8 @@ $( document ).ready(function() {
 
     $("#reloadAct").click(function(){
         $("#reloadAct_progress").addClass("fa fa-spinner fa-pulse");
-            ajaxCall(url="/api/wireguard/service/reload", sendData={}, callback=function(data,status) {
-                $("#reloadAct_progress").removeClass("fa fa-spinner fa-pulse");
-            });
+        ajaxCall(url="/api/wireguard/service/reload", sendData={}, callback=function(data,status) {
+            $("#reloadAct_progress").removeClass("fa fa-spinner fa-pulse");
         });
     });
 
