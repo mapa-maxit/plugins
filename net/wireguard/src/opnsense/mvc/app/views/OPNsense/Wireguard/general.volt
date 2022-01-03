@@ -1,6 +1,6 @@
 {#
- # OPNsense (c) 2014-2018 by Deciso B.V.
- # OPNsense (c) 2018 Michael Muenz <m.muenz@gmail.com>
+ # OPNsense (c) 2014 - 2018 by Deciso B.V.
+ # OPNsense (c) 2018 - 2022 Michael Muenz <m.muenz@gmail.com>
  # All rights reserved.
  #
  # Redistribution and use in source and binary forms, with or without modification,
@@ -41,6 +41,7 @@
             <div class="col-md-12">
                 <hr />
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Apply') }}</b> <i id="saveAct_progress"></i></button>
+                <button class="btn pull-right" id="reloadAct" type="button"><b>{{ lang._('Reload') }}</b> <i id="reloadAct_progress" class=""></i></button>
             </div>
         </div>
     </div>
@@ -63,6 +64,7 @@
                     <td colspan="5"></td>
                     <td>
                         <button data-action="add" type="button" class="btn btn-xs btn-default"><span class="fa fa-plus"></span></button>
+                        <button class="btn pull-right" id="reloadAct" type="button"><b>{{ lang._('Reload') }}</b> <i id="reloadAct_progress" class=""></i></button>
                     </td>
                 </tr>
             </tfoot>
@@ -92,6 +94,7 @@
                     <td colspan="5"></td>
                     <td>
                         <button data-action="add" type="button" class="btn btn-xs btn-default"><span class="fa fa-plus"></span></button>
+                        <button class="btn pull-right" id="reloadAct" type="button"><b>{{ lang._('Reload') }}</b> <i id="reloadAct_progress" class=""></i></button>
                     </td>
                 </tr>
             </tfoot>
@@ -182,6 +185,14 @@ $( document ).ready(function() {
         $("#saveAct_server_progress").addClass("fa fa-spinner fa-pulse");
             ajaxCall(url="/api/wireguard/service/reconfigure", sendData={}, callback=function(data,status) {
                 $("#saveAct_server_progress").removeClass("fa fa-spinner fa-pulse");
+            });
+        });
+    });
+
+    $("#reloadAct").click(function(){
+        $("#reloadAct_progress").addClass("fa fa-spinner fa-pulse");
+            ajaxCall(url="/api/wireguard/service/reload", sendData={}, callback=function(data,status) {
+                $("#reloadAct_progress").removeClass("fa fa-spinner fa-pulse");
             });
         });
     });
