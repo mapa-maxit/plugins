@@ -16,6 +16,10 @@ WWW: https://www.wireguard.com/
 Changelog
 ---------
 
+1.10
+
+* Allow graceful reload of WireGuard
+
 1.9
 
 * Rename interface label in filter rules (#2577)
