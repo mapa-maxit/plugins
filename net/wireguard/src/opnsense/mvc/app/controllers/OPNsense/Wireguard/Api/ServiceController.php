@@ -1,7 +1,7 @@
 <?php
 
 /**
- *    Copyright (C) 2018 Michael Muenz <m.muenz@gmail.com>
+ *    Copyright (C) 2018 - 2022 Michael Muenz <m.muenz@gmail.com>
  *
  *    All rights reserved.
  *
@@ -64,6 +64,18 @@ class ServiceController extends ApiMutableServiceControllerBase
     {
         $backend = new Backend();
         $response = $backend->configdRun("wireguard showhandshake");
+        return array("response" => $response);
+    }
+
+    /**
+     * reload wireguard gracefully
+     * @return array
+     */
+    public function reloadAction()
+    {
+        $backend = new Backend();
+        $backend->configdRun('template reload OPNsense/Wireguard');
+        $response = $backend->configdRun("wireguard reload");
         return array("response" => $response);
     }
 }
