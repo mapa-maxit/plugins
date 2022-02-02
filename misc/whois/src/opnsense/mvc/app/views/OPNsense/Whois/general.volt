@@ -34,7 +34,7 @@
                 <hr />
                 <input type="text" id="searchO"></input>
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
-                <ouput type="text" id="out"></output>
+                <input type="text" id="out"></input>
             </div>
         </div>
 </div>
