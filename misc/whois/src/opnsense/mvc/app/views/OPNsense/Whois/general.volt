@@ -35,9 +35,6 @@
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
-                <script type="text/javascript">var Ip = "";</script>
-                <input type="text" name="Ip" id="Ip" value="">
-                <button class="btn btn-primary" id="Ip" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
     </div>
