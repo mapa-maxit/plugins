@@ -41,9 +41,7 @@
 
 <script>
     $("#saveAct").click(function(){
-        $('.printMe').click(function(){
         window.print();
-});
     });
 
 </script>
