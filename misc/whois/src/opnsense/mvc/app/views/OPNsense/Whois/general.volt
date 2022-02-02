@@ -24,10 +24,6 @@
  # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  # POSSIBILITY OF SUCH DAMAGE.
  #}
-
-<!-- Navigation bar -->
-<ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
-</ul>
                      
 <!DOCTYPE html>
 <html>
@@ -61,7 +57,6 @@
 <script>
     updateServiceControlUI('whois');
 
-    <button onclick="nachname = document.getElementById('Ip').value;alert(Ip);">Save</button>
      
     // Call function update_neighbor with a auto-refresh of 3 seconds
     setInterval(update_hourly, 3000);
