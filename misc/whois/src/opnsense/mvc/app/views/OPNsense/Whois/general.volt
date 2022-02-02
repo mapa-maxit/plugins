@@ -25,11 +25,7 @@
  # POSSIBILITY OF SUCH DAMAGE.
  #}
 
-<!-- Navigation bar -->
-<ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
-    <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
-    <li><a data-toggle="tab" href="#hourly">{{ lang._('Hourly Statistics') }}</a></li>
-</ul>
+
 
 <div class="tab-content content-box tab-content">
     <div id="general" class="tab-pane fade in active">
@@ -38,12 +34,8 @@
             <div class="col-md-12">
                 <hr />
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
-                <button class="btn pull-right" id="resetdbAct" type="button"><b>{{ lang._('Reset') }}</b> <i id="resetdbAct_progress" class=""></i></button>
             </div>
         </div>
-    </div>
-    <div id="hourly" class="tab-pane fade in">
-      <pre id="listhourly"></pre>
     </div>
 </div>
 
