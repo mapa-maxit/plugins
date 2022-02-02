@@ -44,8 +44,7 @@
         $("#listhourly").text(data['response']);
          
     $("#saveAct").click(function(){
-        var = $("searchO")
-    print(var)
+        let msg = document.querySelector("#vorname").value;
        
     });
 }
