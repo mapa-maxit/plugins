@@ -35,6 +35,8 @@
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
+             <input type="textfield">
+             <button type="button"
             </div>
         </div>
     </div>
