@@ -33,7 +33,7 @@
             <div class="col-md-12">
                 <hr />
                 <input type="text" id="search" name ="search"></input>
-                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
+                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Show') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
 <div id="print" class="tab-pane fade in">
@@ -43,11 +43,11 @@
 
 <script>
     function print() {
-        ajaxCall(url="/api/vnstat/service/hourly", sendData={}, callback=function(data,status) {
+        ajaxCall(url="/api/whois/service/hourly", sendData={}, callback=function(data,status) {
         $("#print").text(data['response']);
 
     $("#saveAct").click(function(){
-        var data_get_map = {'frm_general_settings':"/api/vnstat/general/get"};
+        var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
         mapDataToFormUI(data_get_map).done(function(data){
         formatTokenizersUI();
        
