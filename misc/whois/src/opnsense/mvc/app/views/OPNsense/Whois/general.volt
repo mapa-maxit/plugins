@@ -37,37 +37,13 @@
              
             </div>
         </div>
-    <div id="hourly" class="tab-pane fade in">
-       <pre id="listhourly"></pre>
-    </div>
 </div>
 
 <script>
-function update_hourly() {
-    ajaxCall(url="/api/vnstat/service/hourly", sendData={}, callback=function(data,status) {
-        $("#listhourly").text(data['response']);
-    });
-}
-$( document ).ready(function() {
-    var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
-    mapDataToFormUI(data_get_map).done(function(data){
-        formatTokenizersUI();
-        $('.selectpicker').selectpicker('refresh');
-    });
-
-    updateServiceControlUI('whois');
-
-    // Call function update_neighbor with a auto-refresh of 3 seconds
-    setInterval(update_hourly, 3000);
-
     $("#saveAct").click(function(){
-        saveFormToEndpoint(url="/api/whois/general/set", formid='frm_general_settings',callback_ok=function(){
-        $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
-            ajaxCall(url="/api/whois/service/reconfigure", sendData={}, callback=function(data,status) {
-                updateServiceControlUI('whois');
-                $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
-            });
-        });
+        $('.printMe').click(function(){
+        window.print();
+});
     });
 
 </script>
