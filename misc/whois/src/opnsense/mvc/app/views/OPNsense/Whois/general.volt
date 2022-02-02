@@ -28,7 +28,8 @@
 
 
 <div class="tab-content content-box tab-content">
-        <div class="content-box" style="padding-bottom: 2.5em;">
+ <div id="general" class="tab-pane fade in active">
+        <div class="content-box" style="padding-bottom: 1.5em;">
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
@@ -36,6 +37,7 @@
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Show') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
+   </div>
 <div id="do">
    <pre id="listdo"></pre>
 </div>
@@ -43,12 +45,12 @@
 
 <script>
 function print_do() {
-    ajaxCall(url="/api/whois/service/do", sendData={}, callback=function(data,status) {
+    ajaxCall(url="/api/whois/do", sendData={}, callback=function(data,status) {
         $("#listdo").text(data['response']);
     });
              
 $( document ).ready(function() {
-    var varry = {'frm_general_settings':"/api/whois/general/get"};
+    var varry = {'frm_general_settings':"/api/whois/get"};
     mapDataToFormUI(varry).done(function(data){
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
