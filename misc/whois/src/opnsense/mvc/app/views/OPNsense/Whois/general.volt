@@ -45,10 +45,9 @@
 </style>
 </head>
 <body>
-
-<button class="button button1">Safe</button>
-
+ 
 <input type="textfield" id="text">
+<button class="button button1">Safe</button>
  
 </body>
 </html>
