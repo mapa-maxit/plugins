@@ -36,22 +36,33 @@
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Show') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
-<div id="pri">
-   <pre id="print"></pre>
+<div id="do">
+   <pre id="listdo"></pre>
 </div>
 </div>
 
 <script>
-    function print() {
-        ajaxCall(url="/api/whois/service/hourly", sendData={}, callback=function(data,status) {
+    function print_do() {
+        ajaxCall(url="/api/whois/service/do", sendData={}, callback=function(data,status) {
         $("#print").text(data['response']);
 
     $("#saveAct").click(function(){
         var data_get_map = {'frm_general_settings':"/api/whois/1.1.1.1"};
         mapDataToFormUI(data_get_map).done(function(data){
         formatTokenizersUI();
+        $('.selectpicker').selectpicker('refresh');
        
     });
+    $("#saveAct").click(function(){
+        saveFormToEndpoint(url="/api/vnstat/general/set", formid='frm_general_settings',callback_ok=function(){
+        $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
+            ajaxCall(url="/api/vnstat/service/reconfigure", sendData={}, callback=function(data,status) {
+                updateServiceControlUI('vnstat');
+                $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
+            });
+        });
+    });
+
 }
     });
 
