@@ -36,7 +36,7 @@
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Show') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
-<div id="print" class="tab-pane fade in">
+<div id="pri">
    <pre id="print"></pre>
 </div>
 </div>
