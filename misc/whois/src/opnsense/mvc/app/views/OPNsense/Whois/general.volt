@@ -44,7 +44,8 @@
         $("#listhourly").text(data['response']);
          
     $("#saveAct").click(function(){
-        update_houtly();
+        var = $("searchO")
+    print(var)
        
     });
 }
