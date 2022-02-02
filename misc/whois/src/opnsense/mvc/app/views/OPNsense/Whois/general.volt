@@ -34,23 +34,23 @@
 <head>
 <style>
 .button {
-  border: none;
+  border: black;
   color: white;
   padding: 15px 32px;
-  text-align: center;
+  text-align: none;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 10px;
   margin: 4px 2px;
   cursor: pointer;
 }
 
-.button1 {background-color: #808080;} /* Green */
+.button1 {background-color: #808080;} /* Grey */
 </style>
 </head>
 <body>
 
-<button class="button button1">Green</button>
+<button class="button button1">Safe</button>
 
 <input type="textfield" id="text">
  
