@@ -43,14 +43,6 @@
 </div>
 
 <script>
-
-$( document ).ready(function() {
-    var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
-    mapDataToFormUI(data_get_map).done(function(data){
-        formatTokenizersUI();
-        $('.selectpicker').selectpicker('refresh');
-    });
-
     updateServiceControlUI('whois');
 
     // Call function update_neighbor with a auto-refresh of 3 seconds
@@ -65,21 +57,4 @@ $( document ).ready(function() {
             });
         });
     });
-
-    $("#resetdbAct").click(function () {
-        stdDialogConfirm(
-            '{{ lang._('Confirm database reset') }}',
-            '{{ lang._('Do you want to reset the database?') }}',
-            '{{ lang._('Yes') }}', '{{ lang._('Cancel') }}', function () {
-                $("#resetdbAct_progress").addClass("fa fa-spinner fa-pulse");
-                ajaxCall(url="/api/whois/service/resetdb", sendData={}, callback=function(data,status) {
-                    ajaxCall(url="/api/whois/service/reconfigure", sendData={}, callback=function(data,status) {
-                    updateServiceControlUI('whois');
-                    $("#resetdbAct_progress").removeClass("fa fa-spinner fa-pulse");
-                });
-            });
-        });
-    });
-});
-
 </script>
