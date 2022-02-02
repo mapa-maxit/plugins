@@ -44,7 +44,7 @@
 <script>
 function print_do() {
     ajaxCall(url="/api/vnstat/service/do", sendData={}, callback=function(data,status) {
-        $("#listhourly").text(data['response']);
+        $("#listdo").text(data['response']);
     });
              
 $( document ).ready(function() {
