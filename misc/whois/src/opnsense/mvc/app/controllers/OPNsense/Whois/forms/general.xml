@@ -1,2 +1,7 @@
 <form>
+    <field>
+        <id>general.ip</id>
+        <label>IP</label>
+        <type>text</type>
+    </field>
 </form>
