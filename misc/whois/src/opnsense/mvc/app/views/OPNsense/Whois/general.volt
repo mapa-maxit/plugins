@@ -28,10 +28,7 @@
 <!-- Navigation bar -->
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
 </ul>
-
-<input type="textfield" id="text">
-        
-             
+                     
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,14 +45,15 @@
   cursor: pointer;
 }
 
-.button1 {background-color: #4CAF50;} /* Green */
+.button1 {background-color: #808080;} /* Green */
 </style>
 </head>
 <body>
 
 <button class="button button1">Green</button>
-<button class="button button2">Blue</button>
 
+<input type="textfield" id="text">
+ 
 </body>
 </html>
  
