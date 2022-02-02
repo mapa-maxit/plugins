@@ -24,39 +24,48 @@
  # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  # POSSIBILITY OF SUCH DAMAGE.
  #}
-                     
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.button {
-  border: black;
-  color: white;
-  padding: 15px 32px;
-  text-align: none;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-  margin: 4px 2px;
-  cursor: pointer;
+
+<!-- Navigation bar -->
+<ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
+    <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
+    <li><a data-toggle="tab" href="#hourly">{{ lang._('Hourly Statistics') }}</a></li>
+</ul>
+
+<div class="tab-content content-box tab-content">
+    <div id="general" class="tab-pane fade in active">
+        <div class="content-box" style="padding-bottom: 1.5em;">
+            {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
+            <div class="col-md-12">
+                <hr />
+                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
+                <button class="btn pull-right" id="resetdbAct" type="button"><b>{{ lang._('Reset') }}</b> <i id="resetdbAct_progress" class=""></i></button>
+            </div>
+        </div>
+    </div>
+    <div id="hourly" class="tab-pane fade in">
+      <pre id="listhourly"></pre>
+    </div>
+</div>
+
+<script>
+
+// Put API call into a function, needed for auto-refresh
+function update_hourly() {
+    ajaxCall(url="/api/whois/service/hourly", sendData={}, callback=function(data,status) {
+        $("#listhourly").text(data['response']);
+    });
 }
 
-.button1 {background-color: #808080;} /* Grey */
-</style>
-</head>
-<body>
- 
-<input type="textfield" id="text">
-<button class="button button1">Safe</button>
- 
-</body>
-</html>
- 
- 
-<script>
+
+$( document ).ready(function() {
+    var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
+    mapDataToFormUI(data_get_map).done(function(data){
+        formatTokenizersUI();
+        $('.selectpicker').selectpicker('refresh');
+    });
+
     updateServiceControlUI('whois');
 
-     
     // Call function update_neighbor with a auto-refresh of 3 seconds
     setInterval(update_hourly, 3000);
 
@@ -69,4 +78,21 @@
             });
         });
     });
+
+    $("#resetdbAct").click(function () {
+        stdDialogConfirm(
+            '{{ lang._('Confirm database reset') }}',
+            '{{ lang._('Do you want to reset the database?') }}',
+            '{{ lang._('Yes') }}', '{{ lang._('Cancel') }}', function () {
+                $("#resetdbAct_progress").addClass("fa fa-spinner fa-pulse");
+                ajaxCall(url="/api/whois/service/resetdb", sendData={}, callback=function(data,status) {
+                    ajaxCall(url="/api/whois/service/reconfigure", sendData={}, callback=function(data,status) {
+                    updateServiceControlUI('whois');
+                    $("#resetdbAct_progress").removeClass("fa fa-spinner fa-pulse");
+                });
+            });
+        });
+    });
+});
+
 </script>
