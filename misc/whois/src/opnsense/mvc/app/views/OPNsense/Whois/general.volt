@@ -43,7 +43,7 @@
 
 <script>
 function print_do() {
-    ajaxCall(url="/api/vnstat/service/do", sendData={}, callback=function(data,status) {
+    ajaxCall(url="/api/whois/service/do", sendData={}, callback=function(data,status) {
         $("#listdo").text(data['response']);
     });
              
