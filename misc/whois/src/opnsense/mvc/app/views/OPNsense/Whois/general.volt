@@ -29,9 +29,6 @@
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
     <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
     <li><a data-toggle="tab" href="#hourly">{{ lang._('Hourly Statistics') }}</a></li>
-    <li><a data-toggle="tab" href="#daily">{{ lang._('Daily Statistics') }}</a></li>
-    <li><a data-toggle="tab" href="#monthly">{{ lang._('Monthly Statistics') }}</a></li>
-    <li><a data-toggle="tab" href="#yearly">{{ lang._('Yearly Statistics') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content">
@@ -48,15 +45,6 @@
     <div id="hourly" class="tab-pane fade in">
       <pre id="listhourly"></pre>
     </div>
-    <div id="daily" class="tab-pane fade in">
-      <pre id="listdaily"></pre>
-    </div>
-    <div id="monthly" class="tab-pane fade in">
-      <pre id="listmonthly"></pre>
-    </div>
-    <div id="yearly" class="tab-pane fade in">
-      <pre id="listyearly"></pre>
-    </div>
 </div>
 
 <script>
@@ -67,21 +55,7 @@ function update_hourly() {
         $("#listhourly").text(data['response']);
     });
 }
-function update_daily() {
-    ajaxCall(url="/api/whois/service/daily", sendData={}, callback=function(data,status) {
-        $("#listdaily").text(data['response']);
-    });
-}
-function update_monthly() {
-    ajaxCall(url="/api/whois/service/monthly", sendData={}, callback=function(data,status) {
-        $("#listmonthly").text(data['response']);
-    });
-}
-function update_yearly() {
-    ajaxCall(url="/api/whois/service/yearly", sendData={}, callback=function(data,status) {
-        $("#listyearly").text(data['response']);
-    });
-}
+
 
 $( document ).ready(function() {
     var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
@@ -94,9 +68,6 @@ $( document ).ready(function() {
 
     // Call function update_neighbor with a auto-refresh of 3 seconds
     setInterval(update_hourly, 3000);
-    setInterval(update_daily, 3000);
-    setInterval(update_monthly, 3000);
-    setInterval(update_yearly, 3000);
 
     $("#saveAct").click(function(){
         saveFormToEndpoint(url="/api/whois/general/set", formid='frm_general_settings',callback_ok=function(){
