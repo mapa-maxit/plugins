@@ -46,6 +46,17 @@ class ServiceController extends ApiMutableServiceControllerBase
     protected static $internalServiceName = 'whois';
 
     /**
+     * list hourly statistics
+     * @return array
+     */
+    public function hourlyAction()
+    {
+        $backend = new Backend();
+        $response = $backend->configdRun("vnstat hourly");
+        return array("response" => $response);
+    }
+    
+    /**
      * remove database folder
      * @return array
      */
