@@ -27,8 +27,6 @@
 
 <!-- Navigation bar -->
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
-    <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
-    <li><a data-toggle="tab" href="#hourly">{{ lang._('Hourly Statistics') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content">
@@ -42,20 +40,9 @@
             </div>
         </div>
     </div>
-    <div id="hourly" class="tab-pane fade in">
-      <pre id="listhourly"></pre>
-    </div>
 </div>
 
 <script>
-
-// Put API call into a function, needed for auto-refresh
-function update_hourly() {
-    ajaxCall(url="/api/whois/service/hourly", sendData={}, callback=function(data,status) {
-        $("#listhourly").text(data['response']);
-    });
-}
-
 
 $( document ).ready(function() {
     var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
