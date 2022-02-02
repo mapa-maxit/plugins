@@ -1,8 +1,2 @@
 <form>
-    <field>
-        <id>general.text</id>
-        <label>Ip: </label>
-        <type>text</type>
-        <help>Search for an IP</help>
-    </field>
 </form>
