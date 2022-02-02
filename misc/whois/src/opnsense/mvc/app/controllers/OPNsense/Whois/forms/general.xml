@@ -1,14 +1,14 @@
 <form>
     <field>
-        <id>general.enabled</id>
+        <id>general.text</id>
         <label>Ip: </label>
-        <type>TextField</type>
+        <type>textfield</type>
         <help>Search for an IP</help>
     </field>
     <field>
-        <id>general.interface</id>
+        <id>general.button</id>
         <label>Search</label>
-        <type>button</type>
+        <type>Button</type>
         <help>Set the interface to listen on.</help>
     </field>
     
