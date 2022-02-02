@@ -36,13 +36,24 @@
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
+<div id="print" class="tab-pane fade in">
+   <pre id="print"></pre>
+</div>
 </div>
 
 <script>
-    function update_hourly() {
+    function print() {
         ajaxCall(url="/api/vnstat/service/hourly", sendData={}, callback=function(data,status) {
-        $("#listhourly").text(data['response']);
-         
+        $("#print").text(data['response']);
+    $( document ).ready(function() {
+    var data_get_map = {'frm_general_settings':"/api/vnstat/general/get"};
+    mapDataToFormUI(data_get_map).done(function(data){
+        formatTokenizersUI();
+     
+     
+        $('.selectpicker').selectpicker('refresh');
+    });
+
     $("#saveAct").click(function(){
         let msg = document.querySelector("#search").value;
        
