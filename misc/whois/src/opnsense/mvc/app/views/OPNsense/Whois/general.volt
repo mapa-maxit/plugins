@@ -35,13 +35,42 @@
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
-             <input type="textfield">
-             <button type="button"
+             <input type="textfield" id="text">
+             <button type="button" id="button">
             </div>
         </div>
     </div>
 </div>
+        
+             
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
+.button1 {background-color: #4CAF50;} /* Green */
+</style>
+</head>
+<body>
+
+<button class="button button1">Green</button>
+<button class="button button2">Blue</button>
+
+</body>
+</html>
+ 
+ 
 <script>
     updateServiceControlUI('whois');
 
