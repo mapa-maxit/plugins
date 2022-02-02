@@ -32,7 +32,7 @@
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
-                <input type="text" id="searchO"></input>
+                <input type="text" id="search" name ="search"></input>
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
@@ -44,7 +44,7 @@
         $("#listhourly").text(data['response']);
          
     $("#saveAct").click(function(){
-        let msg = document.querySelector("#vorname").value;
+        let msg = document.querySelector("#search").value;
        
     });
 }
