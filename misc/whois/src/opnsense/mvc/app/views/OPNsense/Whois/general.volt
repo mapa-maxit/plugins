@@ -48,8 +48,8 @@ function print_do() {
     });
              
 $( document ).ready(function() {
-    var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
-    mapDataToFormUI(data_get_map).done(function(data){
+    var varry = {'frm_general_settings':"/api/whois/general/get"};
+    mapDataToFormUI(varry).done(function(data){
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
     });
