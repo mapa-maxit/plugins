@@ -78,16 +78,6 @@ class ServiceController extends ApiMutableServiceControllerBase
         return array("response" => $response);
     }
 
-    /**
-     * list yearly statistics
-     * @return array
-     */
-    public function yearlyAction()
-    {
-        $backend = new Backend();
-        $response = $backend->configdRun("whois yearly");
-        return array("response" => $response);
-    }
 
     /**
      * remove database folder
