@@ -1,0 +1,15 @@
+{% if helpers.exists('OPNsense.Whois.general.enabled') and OPNsense.Whois.general.enabled == '1' %}
+{% from 'OPNsense/Macros/interface.macro' import physical_interface %}
+Whois_var_script="/usr/local/opnsense/scripts/OPNsense/Whois/setup.sh"
+Whois_enable="YES"
+{%   if helpers.exists('OPNsense.Whois.general.interface') and OPNsense.Whois.general.interface != '' %}
+{%     set interfaces = [] %}
+{%     for interface in OPNsense.Whois.general.interface.split(',') %}
+{%       do interfaces.append(physical_interface(interface)) %}
+{%     endfor %}
+Whois_additional_ifaces="{{ interfaces|join(' ') }}"
+{%   endif %}
+{% else %}
+Whois_enable="NO"
+{% endif %}
+Whois_var_mfs="/var/lib/Whois"

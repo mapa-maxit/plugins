@@ -1,0 +1,5 @@
+<menu>
+  <Services>
+    <Whois cssClass="fa fa-bar-chart" url="/ui/Whois/general/index" />
+  </Services>
+</menu>
