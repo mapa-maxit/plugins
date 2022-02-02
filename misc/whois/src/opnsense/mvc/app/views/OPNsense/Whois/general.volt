@@ -28,7 +28,7 @@
 
 
 <div class="tab-content content-box tab-content">
-        <div class="content-box" style="padding-bottom: 1.5em;">
+        <div class="content-box" style="padding-bottom: 2.5em;">
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
@@ -53,7 +53,7 @@ $( document ).ready(function() {
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
     });
-updateServiceControlUI('vnstat');
+updateServiceControlUI('whois');
 
 setInterval(print_do, 3000);
 </script>
