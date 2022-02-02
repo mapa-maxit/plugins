@@ -37,10 +37,17 @@
              
             </div>
         </div>
+    <div id="hourly" class="tab-pane fade in">
+       <pre id="listhourly"></pre>
+    </div>
 </div>
 
 <script>
-
+function update_hourly() {
+    ajaxCall(url="/api/vnstat/service/hourly", sendData={}, callback=function(data,status) {
+        $("#listhourly").text(data['response']);
+    });
+}
 $( document ).ready(function() {
     var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
     mapDataToFormUI(data_get_map).done(function(data){
