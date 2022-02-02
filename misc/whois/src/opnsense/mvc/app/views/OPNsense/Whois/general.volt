@@ -47,7 +47,7 @@
         $("#print").text(data['response']);
 
     $("#saveAct").click(function(){
-        var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
+        var data_get_map = {'frm_general_settings':"/api/whois/1.1.1.1"};
         mapDataToFormUI(data_get_map).done(function(data){
         formatTokenizersUI();
        
