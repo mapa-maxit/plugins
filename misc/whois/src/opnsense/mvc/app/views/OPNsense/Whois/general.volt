@@ -40,14 +40,6 @@
 
 <script>
 
-// Put API call into a function, needed for auto-refresh
-function update_hourly() {
-    ajaxCall(url="/api/whois/service/hourly", sendData={}, callback=function(data,status) {
-        $("#listhourly").text(data['response']);
-    });
-}
-
-
 $( document ).ready(function() {
     var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
     mapDataToFormUI(data_get_map).done(function(data){
@@ -69,21 +61,5 @@ $( document ).ready(function() {
             });
         });
     });
-
-    $("#resetdbAct").click(function () {
-        stdDialogConfirm(
-            '{{ lang._('Confirm database reset') }}',
-            '{{ lang._('Do you want to reset the database?') }}',
-            '{{ lang._('Yes') }}', '{{ lang._('Cancel') }}', function () {
-                $("#resetdbAct_progress").addClass("fa fa-spinner fa-pulse");
-                ajaxCall(url="/api/whois/service/resetdb", sendData={}, callback=function(data,status) {
-                    ajaxCall(url="/api/whois/service/reconfigure", sendData={}, callback=function(data,status) {
-                    updateServiceControlUI('whois');
-                    $("#resetdbAct_progress").removeClass("fa fa-spinner fa-pulse");
-                });
-            });
-        });
-    });
-});
 
 </script>
