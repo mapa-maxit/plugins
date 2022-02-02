@@ -2,13 +2,13 @@
     <field>
         <id>general.text</id>
         <label>Ip: </label>
-        <type>textfield</type>
+        <type>text</type>
         <help>Search for an IP</help>
     </field>
     <field>
         <id>general.button</id>
         <label>Search</label>
-        <type>Button</type>
+        <type>button</type>
         <help>Set the interface to listen on.</help>
     </field>
     
