@@ -34,14 +34,20 @@
                 <hr />
                 <input type="text" id="searchO"></input>
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
-                <input type="text" id="out"></input>
             </div>
         </div>
 </div>
 
 <script>
+    function update_hourly() {
+        ajaxCall(url="/api/vnstat/service/hourly", sendData={}, callback=function(data,status) {
+        $("#listhourly").text(data['response']);
+         
     $("#saveAct").click(function(){
-        $("out") = $("searchO")
+        update_houtly();
+       
+    });
+}
     });
 
 </script>
