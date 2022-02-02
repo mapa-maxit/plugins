@@ -30,7 +30,6 @@
 </ul>
 
 <input type="textfield" id="text">
-<button type="button" id="button">
         
              
 <!DOCTYPE html>
