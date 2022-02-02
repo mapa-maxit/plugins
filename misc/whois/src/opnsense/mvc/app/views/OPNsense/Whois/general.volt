@@ -32,6 +32,7 @@
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
+                <TextField type="text" lable="Ip id="GivenIp"></TextField>
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
              
             </div>
