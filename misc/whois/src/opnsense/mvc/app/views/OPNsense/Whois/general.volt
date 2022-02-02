@@ -25,37 +25,49 @@
  # POSSIBILITY OF SUCH DAMAGE.
  #}
 
-
+<!-- Navigation bar -->
+<ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
+    <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
+</ul>
 
 <div class="tab-content content-box tab-content">
- <div id="general" class="tab-pane fade in active">
+    <div id="general" class="tab-pane fade in active">
         <div class="content-box" style="padding-bottom: 1.5em;">
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
-                <input type="text" id="search" name ="search"></input>
-                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Show') }}</b> <i id="saveAct_progress"></i></button>
+                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Whois') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
-   </div>
-<div id="do">
-   <pre id="listdo"></pre>
-</div>
+      <div id="hourly">
+        <pre id="listhourly"></pre>
+      </div>
+    </div>
 </div>
 
 <script>
-function print_do() {
-    ajaxCall(url="/api/whois/do", sendData={}, callback=function(data,status) {
-        $("#listdo").text(data['response']);
+
+// Put API call into a function, needed for auto-refresh
+function update_hourly() {
+    ajaxCall(url="/api/whois/service/hourly", sendData={}, callback=function(data,status) {
+        $("#listhourly").text(data['response']);
     });
-             
+}
+
 $( document ).ready(function() {
-    var varry = {'frm_general_settings':"/api/whois/get"};
-    mapDataToFormUI(varry).done(function(data){
+    var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
+    mapDataToFormUI(data_get_map).done(function(data){
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
     });
-updateServiceControlUI('whois');
 
-setInterval(print_do, 3000);
+    $("#saveAct").click(function(){
+        saveFormToEndpoint(url="/api/whois/general/set", formid='frm_general_settings',callback_ok=function(){
+        $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
+                $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
+        });
+    });
+
+});
+
 </script>
