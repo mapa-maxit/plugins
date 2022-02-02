@@ -34,14 +34,14 @@
                 <hr />
                 <input type="text" id="searchO"></input>
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
-             
+                <ouput type="text" id="out"></output>
             </div>
         </div>
 </div>
 
 <script>
     $("#saveAct").click(function(){
-        window.print();
+        $("out") = $("searchO")
     });
 
 </script>
