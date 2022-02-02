@@ -46,40 +46,6 @@ class ServiceController extends ApiMutableServiceControllerBase
     protected static $internalServiceName = 'whois';
 
     /**
-     * list hourly statistics
-     * @return array
-     */
-    public function hourlyAction()
-    {
-        $backend = new Backend();
-        $response = $backend->configdRun("whois hourly");
-        return array("response" => $response);
-    }
-
-    /**
-     * list daily statistics
-     * @return array
-     */
-    public function dailyAction()
-    {
-        $backend = new Backend();
-        $response = $backend->configdRun("whois daily");
-        return array("response" => $response);
-    }
-
-    /**
-     * list monthly statistics
-     * @return array
-     */
-    public function monthlyAction()
-    {
-        $backend = new Backend();
-        $response = $backend->configdRun("whois monthly");
-        return array("response" => $response);
-    }
-
-
-    /**
      * remove database folder
      * @return array
      */
