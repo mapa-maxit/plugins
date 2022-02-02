@@ -37,8 +37,7 @@
                 <hr />
                 <script type="text/javascript">var Ip = "";</script>
                 <input type="text" name="Ip" id="Ip" value="">
-                <button onclick="nachname = document.getElementById('Nachname').value;alert(nachname);">klick</button>
-                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
+                <button class="btn btn-primary" id="Ip" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
     </div>
@@ -47,6 +46,8 @@
 <script>
     updateServiceControlUI('whois');
 
+    <button onclick="nachname = document.getElementById('Ip').value;alert(Ip);">Save</button>
+     
     // Call function update_neighbor with a auto-refresh of 3 seconds
     setInterval(update_hourly, 3000);
 
