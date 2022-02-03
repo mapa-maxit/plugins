@@ -28,20 +28,20 @@
  *
  */
 
-namespace OPNsense\whois\Api;
+namespace OPNsense\Whois\Api;
 
 use OPNsense\Base\ApiMutableServiceControllerBase;
 use OPNsense\Core\Backend;
-use OPNsense\whois\General;
+use OPNsense\Whois\General;
 
 /**
  * Class ServiceController
- * @package OPNsense\whois
+ * @package OPNsense\Whois
  */
 class ServiceController extends ApiMutableServiceControllerBase
 {
-    protected static $internalServiceClass = '\OPNsense\whois\General';
-    protected static $internalServiceTemplate = 'OPNsense/whois';
+    protected static $internalServiceClass = '\OPNsense\Whois\General';
+    protected static $internalServiceTemplate = 'OPNsense/Whois';
     protected static $internalServiceEnabled = 'enabled';
     protected static $internalServiceName = 'whois';
 
@@ -52,10 +52,43 @@ class ServiceController extends ApiMutableServiceControllerBase
     public function hourlyAction()
     {
         $backend = new Backend();
-        $response = $backend->configdRun("vnstat hourly");
+        $response = $backend->configdRun("whois hourly");
         return array("response" => $response);
     }
-    
+
+    /**
+     * list daily statistics
+     * @return array
+     */
+    public function dailyAction()
+    {
+        $backend = new Backend();
+        $response = $backend->configdRun("whois daily");
+        return array("response" => $response);
+    }
+
+    /**
+     * list monthly statistics
+     * @return array
+     */
+    public function monthlyAction()
+    {
+        $backend = new Backend();
+        $response = $backend->configdRun("whois monthly");
+        return array("response" => $response);
+    }
+
+    /**
+     * list yearly statistics
+     * @return array
+     */
+    public function yearlyAction()
+    {
+        $backend = new Backend();
+        $response = $backend->configdRun("whois yearly");
+        return array("response" => $response);
+    }
+
     /**
      * remove database folder
      * @return array

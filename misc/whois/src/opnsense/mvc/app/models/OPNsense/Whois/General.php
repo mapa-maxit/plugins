@@ -26,7 +26,7 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-namespace OPNsense\whois;
+namespace OPNsense\Whois;
 
 use OPNsense\Base\BaseModel;
 
