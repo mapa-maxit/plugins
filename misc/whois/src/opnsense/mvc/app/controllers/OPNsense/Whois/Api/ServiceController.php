@@ -99,4 +99,12 @@ class ServiceController extends ApiMutableServiceControllerBase
         $response = $backend->configdRun("whois resetdb");
         return array("response" => $response);
     }
+    public function ipAction()
+{
+        $backend = new Backend();
+        $mdlGeneral = new General();
+        $ipaddress = $mdlGeneral->ip;
+        $response = $backend->configdRun("whois $ipaddress");
+        return array("response" => $response);
+}
 }
