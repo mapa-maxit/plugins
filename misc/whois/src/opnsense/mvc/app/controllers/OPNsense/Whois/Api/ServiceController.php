@@ -104,7 +104,7 @@ class ServiceController extends ApiMutableServiceControllerBase
         $backend = new Backend();
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
-        $response = $backend->configdRun("whois ip 1.1.1.1");
+        $response = $backend->configdRun("whois ip $ipaddress");
         return array("response" => $response);
         }
 }
