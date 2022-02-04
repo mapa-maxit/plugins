@@ -1,11 +1,5 @@
 <form>
     <field>
-        <id>general.enabled</id>
-        <label>Enable vnStat daemon</label>
-        <type>checkbox</type>
-        <help>This will activate the vnStat daemon.</help>
-    </field>
-    <field>
         <id>general.ip</id>
         <label>IP</label>
         <type>text</type>
