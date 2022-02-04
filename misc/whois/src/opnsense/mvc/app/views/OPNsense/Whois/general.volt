@@ -28,8 +28,6 @@
 <!-- Navigation bar -->
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
     <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
-    <li><a data-toggle="tab" href="#ip">{{ lang._('ip') }}</a></li>
- <li><a data-toggle="tab" href="#daily">{{ lang._('Daily Statistics') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content">
@@ -39,7 +37,6 @@
             <div class="col-md-12">
                 <hr />
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Save') }}</b> <i id="saveAct_progress"></i></button>
-                <!--<button class="btn pull-right" id="resetdbAct" type="button"><b>{{ lang._('Reset') }}</b> <i id="resetdbAct_progress" class=""></i></button>-->
             </div>
         </div>
     <div id="ip" class="tab-pane fade in">
