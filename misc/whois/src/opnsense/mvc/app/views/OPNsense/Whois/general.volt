@@ -42,17 +42,17 @@
             </div>
         </div>
     </div>
-    <div id="hourly" class="tab-pane fade in">
-      <pre id="listhourly"></pre>
+    <div id="id" class="tab-pane fade in">
+      <pre id="loadid"></pre>
     </div>
 </div>
 
 <script>
 
 // Put API call into a function, needed for auto-refresh
-function update_hourly() {
-    ajaxCall(url="/api/whois/service/daily", sendData={}, callback=function(data,status) {
-        $("#listhourly").text(data['response']);
+function listid() {
+    ajaxCall(url="/api/whois/service/id", sendData={}, callback=function(data,status) {
+        $("#loadid").text(data['response']);
     });
 }
 
