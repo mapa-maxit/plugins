@@ -1,7 +1,7 @@
 <?php
 
 /**
- *    Copyright (C) 2022 Manuel Pasti <mapa@maxit.de>
+ *    Copyright (C) 2022 Manuel Pasti <mapa@max-it.de>
  *
  *    All rights reserved.
  *
