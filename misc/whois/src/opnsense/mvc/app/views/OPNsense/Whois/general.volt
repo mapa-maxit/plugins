@@ -55,7 +55,7 @@
 
 // Put API call into a function, needed for auto-refresh
 function update_hourly() {
-    ajaxCall(url="/api/whois/Services/ip", sendData={}, callback=function(data,status) {
+    ajaxCall(url="/api/whois/service/ip", sendData={}, callback=function(data,status) {
         $("#ipl").text(data['response']);
     });
 }
