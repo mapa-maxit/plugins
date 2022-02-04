@@ -28,7 +28,7 @@
 <!-- Navigation bar -->
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
     <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
-    <li><a data-toggle="tab" href="#ip">{{ lang._('Hourly Statistics') }}</a></li>
+    <li><a data-toggle="tab" href="#ip">{{ lang._('ip') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content">
