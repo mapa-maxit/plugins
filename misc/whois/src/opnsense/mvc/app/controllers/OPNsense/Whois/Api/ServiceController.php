@@ -102,7 +102,7 @@ class ServiceController extends ApiMutableServiceControllerBase
     public function ipAction()
 {
         $backend = new Backend();
-        //$mdlGeneral = new General();
+        $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
         $response = $backend->configdRun("whois 1.1.1.1");
         return array("response" => $response);
