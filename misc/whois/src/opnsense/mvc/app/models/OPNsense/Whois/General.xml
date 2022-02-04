@@ -3,10 +3,6 @@
     <description>Whois configuration</description>
     <version>0.0.2</version>
     <items>
-        <enabled type="BooleanField">
-            <default>0</default>
-            <Required>Y</Required>
-        </enabled>
         <ip type="NetworkField">
             <Required>N</Required>
         </ip>
