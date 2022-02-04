@@ -29,6 +29,7 @@
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
     <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
     <li><a data-toggle="tab" href="#ip">{{ lang._('ip') }}</a></li>
+ <li><a data-toggle="tab" href="#daily">{{ lang._('Daily Statistics') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content">
@@ -45,6 +46,9 @@
     <div id="ip" class="tab-pane fade in">
       <pre id="ipl"></pre>
     </div>
+    <div id="daily" class="tab-pane fade in">
+      <pre id="listdaily"></pre>
+    </div>
 </div>
 
 <script>
@@ -55,7 +59,11 @@ function update_hourly() {
         $("#ipl").text(data['response']);
     });
 }
-
+function update_daily() {
+    ajaxCall(url="/api/vnstat/service/daily", sendData={}, callback=function(data,status) {
+        $("#listdaily").text(data['response']);
+    });
+}
 $( document ).ready(function() {
     var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
     mapDataToFormUI(data_get_map).done(function(data){
