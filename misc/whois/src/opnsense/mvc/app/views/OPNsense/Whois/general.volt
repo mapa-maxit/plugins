@@ -42,7 +42,7 @@
             </div>
         </div>
     </div>
-    <div id="id" class="tab-pane fade in">
+    <div id="ip" class="tab-pane fade in">
       <pre id="listhourly"></pre>
     </div>
 </div>
