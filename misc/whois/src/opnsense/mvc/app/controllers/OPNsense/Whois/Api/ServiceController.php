@@ -105,9 +105,6 @@ class ServiceController extends ApiMutableServiceControllerBase
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
         $response = $backend->configdRun("whois ip 1.1.1.1");
-        if ($response == "Action not found"){
-            $response = "ok";
-        }
         return array("response" => $response);
         }
 }
