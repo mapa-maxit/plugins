@@ -109,15 +109,5 @@ class ServiceController extends ApiMutableServiceControllerBase
             $response = "ok";
         }
         return array("response" => $response);
-}
-    public function getAction()
-{
-    // define list of configurable settings
-    $result = array();
-    if ($this->request->isGet()) {
-        $mdlHelloWorld = new HelloWorld();
-        $result['helloworld'] = $mdlHelloWorld->getNodes();
-    }
-    return $result;
-}
+        }
 }
