@@ -28,7 +28,7 @@
 <!-- Navigation bar -->
 <ul class="nav nav-tabs" data-tabs="tabs" id="maintabs">
     <li class="active"><a data-toggle="tab" href="#general">{{ lang._('General') }}</a></li>
-    <li><a data-toggle="tab" href="#id">{{ lang._('Hourly Statistics') }}</a></li>
+    <li><a data-toggle="tab" href="#ip">{{ lang._('Hourly Statistics') }}</a></li>
 </ul>
 
 <div class="tab-content content-box tab-content">
@@ -42,8 +42,8 @@
             </div>
         </div>
     </div>
-    <div id="id" class="tab-pane fade in">
-      <pre id="idl"></pre>
+    <div id="ip" class="tab-pane fade in">
+      <pre id="ipl"></pre>
     </div>
 </div>
 
@@ -52,7 +52,7 @@
 // Put API call into a function, needed for auto-refresh
 function update_hourly() {
     ajaxCall(url="/api/whois/service/id", sendData={}, callback=function(data,status) {
-        $("#idl").text(data['response']);
+        $("#ipl").text(data['response']);
     });
 }
 
