@@ -107,6 +107,7 @@ class ServiceController extends ApiMutableServiceControllerBase
         $response = $backend->configdRun("whois 1.1.1.1");
         if ($response == "Action not found"){
             $response = "ok";
+        }
         return array("response" => $response);
 }
 }
