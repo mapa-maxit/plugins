@@ -42,7 +42,7 @@
     <div id="ip" class="tab-pane fade in">
       <pre id="ipl"></pre>
     </div>
-    </div>
+ </div>
 </div>
 
 <script>
