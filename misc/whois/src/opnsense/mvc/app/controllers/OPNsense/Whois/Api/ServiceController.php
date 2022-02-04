@@ -46,11 +46,11 @@ class ServiceController extends ApiMutableServiceControllerBase
     protected static $internalServiceName = 'whois';
 
     public function ipAction()
-{
+    {
         $backend = new Backend();
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
         $response = $backend->configdRun("whois ip $ipaddress");
         return array("response" => $response);
-        }
+    }
 }
