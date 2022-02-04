@@ -42,28 +42,13 @@
                 <!--<button class="btn pull-right" id="resetdbAct" type="button"><b>{{ lang._('Reset') }}</b> <i id="resetdbAct_progress" class=""></i></button>-->
             </div>
         </div>
-    </div>
     <div id="ip" class="tab-pane fade in">
       <pre id="ipl"></pre>
     </div>
-    <div id="daily" class="tab-pane fade in">
-      <pre id="listdaily"></pre>
     </div>
 </div>
 
 <script>
-
-// Put API call into a function, needed for auto-refresh
-function update_hourly() {
-    ajaxCall(url="/api/whois/service/ip", sendData={}, callback=function(data,status) {
-        $("#ipl").text(data['response']);
-    });
-}
-function update_daily() {
-    ajaxCall(url="/api/vnstat/service/daily", sendData={}, callback=function(data,status) {
-        $("#listdaily").text(data['response']);
-    });
-}
 $( document ).ready(function() {
     var data_get_map = {'frm_general_settings':"/api/whois/general/get"};
     mapDataToFormUI(data_get_map).done(function(data){
@@ -71,13 +56,11 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
 
-    // Call function update_neighbor with a auto-refresh of 3 seconds
-    setInterval(update_hourly, 3000);
-
     $("#saveAct").click(function(){
         saveFormToEndpoint(url="/api/whois/general/set", formid='frm_general_settings',callback_ok=function(){
         $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
-            ajaxCall(url="/api/whois/service/reconfigure", sendData={}, callback=function(data,status) {
+            ajaxCall(url="/api/whois/service/ip", sendData={}, callback=function(data,status) {
+                $("#ipl").text(data['response']);
                 $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
             });
         });
