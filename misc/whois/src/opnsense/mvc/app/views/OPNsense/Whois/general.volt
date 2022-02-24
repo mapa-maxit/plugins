@@ -52,7 +52,7 @@ $( document ).ready(function() {
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
     });
-             $("saveAct").click(function(){
+             $("#saveAct").click(function(){
               saveFromToEndpoint(url="/api/whois/general/set", formid='frm_general_settings', callback_ok=function(){
                 $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
