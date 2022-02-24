@@ -41,7 +41,13 @@ class GeneralController extends \OPNsense\Base\IndexController
      public function idAction()
     {
         if ($this->request->isPost()) {
-            $username = escapeshellarg($this->request->getPost("admin_login"));
+            $backend = new Backend();
+            $mdl = new ProxySSO();
+            $username = escapeshellarg($this->request->getPost("id"));
+            
+            $response = $backend->configdRun("whois id{$username}");
+            parent::reconfigureAction();
+            return array("response" => $response,"status" => "ok");
         }
      }
 }
