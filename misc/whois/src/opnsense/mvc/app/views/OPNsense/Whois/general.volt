@@ -55,7 +55,8 @@ $( document ).ready(function() {
              $("SaveAct").click(function(){
                 ajaxCall(
                  url="/api/whois/general/ip",
-                 $("ipl").text(data['response']);
+                 sendData={},
+                 callback=function(data, status)
                  });
 });
 
