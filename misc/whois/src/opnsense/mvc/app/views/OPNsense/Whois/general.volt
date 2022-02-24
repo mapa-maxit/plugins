@@ -53,10 +53,12 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
              $("SaveAct").click(function(){
+                $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
                  url="/api/whois/general/ip",
                  sendData={},
-                 callback=function(data, status){$("#Whois_Output").html(data['response']);}
+                 callback=function(data, status){$("#ipl").text(data['response']);}
+                 $("saveAct_progress").removeClass("fa fa-spinner fa-pulse");
                  });
 });
 
