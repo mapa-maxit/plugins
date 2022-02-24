@@ -53,6 +53,7 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
              $("SaveAct").click(function(){
+              saveFromToEndpoint(url="/api/whois/general/set", formid='frm_general_settings', callback_ok=function(){
                 $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
                  url="/api/whois/general/ip",
@@ -60,6 +61,7 @@ $( document ).ready(function() {
                  callback=function(data, status){$("#ipl").text(data['response']);}
                  $("saveAct_progress").removeClass("fa fa-spinner fa-pulse");
                  });
+             });
              });
 });
 
