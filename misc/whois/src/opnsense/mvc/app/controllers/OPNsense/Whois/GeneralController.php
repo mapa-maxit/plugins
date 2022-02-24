@@ -43,6 +43,6 @@ class GeneralController extends \OPNsense\Base\IndexController
         if ($this->request->isPost()) {
             $username = escapeshellarg($this->request->getPost("admin_login"));
             $pass = escapeshellarg($this->request->getPost("admin_password"));
-            return array("response" => $response,"status" => "ok");
         }
+     }
 }
