@@ -1,5 +1,7 @@
 <menu>
   <Interfaces>
+    <Diagnostics>
       <Whois cssClass="fa fa-bar-chart" url="/ui/whois/general/index" />
+    </Diagnostics>
   </Interfaces>
 </menu>
