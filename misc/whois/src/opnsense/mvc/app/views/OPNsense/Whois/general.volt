@@ -53,8 +53,10 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
              $("#saveAct").click(function(){
-                ajaxCall(url="/api/whois/service/ip",sendData={},callback=function(data, status){
+              $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
+                ajaxCall(url="/api/whois/service/ip",sendData={"admin_login":$("#admin_username").val(), "admin_password":$("#admin_password").val()},callback=function(data, status){
                  $("#ipl").text(data['response']);
+                 $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
              });
        });
