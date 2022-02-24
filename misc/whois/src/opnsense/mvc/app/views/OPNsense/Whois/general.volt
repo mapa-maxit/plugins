@@ -52,17 +52,11 @@ $( document ).ready(function() {
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
     });
-        $("#saveAct").click(function() {
-            ajaxCall(
-                url="/api/proxysso/service/ip",
-                sendData={"admin_login":$("#admin_username").val(), "admin_password":$("#admin_password").val()},
-                callback=function(data,status) { $("#kerberos_output").html(data['response']); }
-            );
-        });
-
-
-  
-
+             $("SaveAct").click(function(){
+                ajaxCall(
+                 url="/api/whois/general/ip",
+                 sendData={"admin_login":$("#admin_username").val(), "admin_password":$("#admin_password").val()},
+                 callback=function(data,status) { $("#kerberos_output").html(data['response']); }
 });
 
 </script>
