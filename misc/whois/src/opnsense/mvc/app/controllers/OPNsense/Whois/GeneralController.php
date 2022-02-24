@@ -41,7 +41,7 @@ class GeneralController extends \OPNsense\Base\IndexController
      public function idAction()
     {
         if ($this->request->isPost()) {
-            $ipss = escapeshellarg($this->request->getPost("ip"));
+            $username = escapeshellarg($this->request->getPost("admin_login"));
         }
      }
 }
