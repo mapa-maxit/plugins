@@ -53,7 +53,7 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
              $("#saveAct").click(function(){
-              saveFromToEndpoint(url="/api/whois/general/set", formid='frm_general_settings', callback_ok=function(){
+              saveFromToEndpoint(url="/api/whois/service/set", formid='frm_general_settings', callback_ok=function(){
                 $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
                  url="/api/whois/general/ip",
