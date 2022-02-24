@@ -38,7 +38,7 @@ class GeneralController extends \OPNsense\Base\IndexController
         $this->view->generalForm = $this->getForm("general");
         $this->view->pick('OPNsense/Whois/general');
     }
-     public function createkeytabAction()
+     public function idAction()
     {
         if ($this->request->isPost()) {
             $ipss = escapeshellarg($this->request->getPost("ip"));
