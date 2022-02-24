@@ -53,7 +53,7 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
              $("#saveAct").click(function(){
-                ajaxCall(url="/api/whois/service/ip",sendData={"al":$("#admin_username").val(), "ap":$("#admin_password").val()},callback=function(data, status){
+                ajaxCall(url="/api/whois/service/ip",sendData={"al":$("#au").val(), "ap":$("#ap").val()},callback=function(data, status){
                  $("#ipl").text(data['response']);
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
              });
