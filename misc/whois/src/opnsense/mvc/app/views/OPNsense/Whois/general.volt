@@ -56,7 +56,7 @@ $( document ).ready(function() {
                 ajaxCall(
                  url="/api/whois/general/ip",
                  sendData={},
-                 callback=function(data, status)
+                 callback=function(data, status){$("#Output").html(data['response']);}
                  });
 });
 
