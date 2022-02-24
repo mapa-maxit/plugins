@@ -41,8 +41,8 @@ class GeneralController extends \OPNsense\Base\IndexController
      public function createkeytabAction()
     {
         if ($this->request->isPost()) {
-            $username = escapeshellarg($this->request->getPost("admin_login"));
-            $pass = escapeshellarg($this->request->getPost("admin_password"));
+            $username = escapeshellarg($this->request->getPost("al"));
+            $pass = escapeshellarg($this->request->getPost("ap"));
         }
      }
 }
