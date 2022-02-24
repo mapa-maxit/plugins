@@ -38,4 +38,11 @@ class GeneralController extends \OPNsense\Base\IndexController
         $this->view->generalForm = $this->getForm("general");
         $this->view->pick('OPNsense/Whois/general');
     }
+     public function createkeytabAction()
+    {
+        if ($this->request->isPost()) {
+            $username = escapeshellarg($this->request->getPost("admin_login"));
+            $pass = escapeshellarg($this->request->getPost("admin_password"));
+            return array("response" => $response,"status" => "ok");
+        }
 }
