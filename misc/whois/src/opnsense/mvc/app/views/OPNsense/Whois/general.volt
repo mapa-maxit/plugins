@@ -60,6 +60,7 @@ $( document ).ready(function() {
                  callback=function(data, status){$("#ipl").text(data['response']);}
                  $("saveAct_progress").removeClass("fa fa-spinner fa-pulse");
                  });
+             });
 });
 
 </script>
