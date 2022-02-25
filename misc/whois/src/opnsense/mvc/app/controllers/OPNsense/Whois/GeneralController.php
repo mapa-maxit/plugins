@@ -38,11 +38,4 @@ class GeneralController extends \OPNsense\Base\IndexController
         $this->view->generalForm = $this->getForm("general");
         $this->view->pick('OPNsense/Whois/general');
     }
-     public function idAction()
-    {
-        if ($this->request->isPost()) {
-            $backend = new Backend();
-
-     }
-     }
 }
