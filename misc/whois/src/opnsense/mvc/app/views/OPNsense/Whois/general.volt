@@ -53,15 +53,14 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
              $("#saveAct").click(function(){
-              saveFormToEndpoint(url="/api/whois/general/set", formid="frm_general_settings",callback_ok=function(){
+              //saveFormToEndpoint(url="/api/whois/general/set", formid="frm_general_settings",callback_ok=function(){
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
                 url="/api/whois/service/ip",
-                sendData={"ipl":$("#ip").val()},
+                sendData={"ipadd":$("#ip").val()},
                 callback=function(data, status){$("#ip").html(data['response']);
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
              });
-                                 });
        });
 
 
