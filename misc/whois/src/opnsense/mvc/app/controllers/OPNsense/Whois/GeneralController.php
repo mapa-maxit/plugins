@@ -42,12 +42,7 @@ class GeneralController extends \OPNsense\Base\IndexController
     {
         if ($this->request->isPost()) {
             $backend = new Backend();
-            $mdl = new ProxySSO();
-            $username = escapeshellarg($this->request->getPost("ip"));
-            
-            $response = $backend->configdRun("whois id{$username}");
-            parent::reconfigureAction();
-            return array("response" => $response,"status" => "ok");
-        }
+
+     }
      }
 }
