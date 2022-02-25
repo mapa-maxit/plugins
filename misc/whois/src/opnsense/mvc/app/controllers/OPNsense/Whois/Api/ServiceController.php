@@ -38,7 +38,7 @@ use OPNsense\Whois\General;
  * Class ServiceController
  * @package OPNsense\Whois
  */
-class ServiceController extends ApiMutableServiceControllerBase
+class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutableServiceControllerBase*/
 {
     protected static $internalServiceClass = '\OPNsense\Whois\General';
     protected static $internalServiceTemplate = 'OPNsense/Whois';
@@ -50,7 +50,7 @@ class ServiceController extends ApiMutableServiceControllerBase
       if ($this->request->isPost()) {
         $backend = new Backend();
         $mdlGeneral = new General();
-        /*$ipaddress = $mdlGeneral->ip;*/
+        $ipaddress = $mdlGeneral->ip;
         
         $ipadi = escapeshellarg($this->request->getPost("ip"));
         
