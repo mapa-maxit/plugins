@@ -53,7 +53,7 @@ class ServiceController extends ApiMutableServiceControllerBase
         
         $ipadi = escapeshellarg($this->request->getPost("Baum"));
         
-        $response = $backend->configdRun("whois ip $ipl");
+        $response = $backend->configdRun("whois ip $ipadi");
         return array("response" => $response);
     }
 }
