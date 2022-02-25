@@ -47,16 +47,15 @@ class ServiceController extends ApiMutableServiceControllerBase
 
     public function ipAction()
     {
-      /*if ($this->request->isPost()) {*/
+      if ($this->request->isPost()) {
         $backend = new Backend();
         $mdlGeneral = new General();
-        $ipaddress = $mdlGeneral->ip;
+        /*$ipaddress = $mdlGeneral->ip;*/
         
         $ipadi = escapeshellarg($this->request->getPost("ip"));
         
         $response = $backend->configdRun("whois ip $ipadi");
         return array("response" => $response);
-      /*}
-        return array("response" => array());*/
+      }
     }
 }
