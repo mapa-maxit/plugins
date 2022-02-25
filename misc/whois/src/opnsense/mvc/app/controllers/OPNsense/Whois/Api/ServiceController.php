@@ -51,7 +51,7 @@ class ServiceController extends ApiMutableServiceControllerBase
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
         
-        $ipaddress = escapeshellarg($this->request->getPost("1.1.1.1"));*/
+        $ipaddress = escapeshellarg($this->request->getPost("ipaddress"));
         
         $response = $backend->configdRun("whois ip $ipaddress");
         return array("response" => $response);
