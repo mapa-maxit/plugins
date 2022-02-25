@@ -56,7 +56,7 @@ $( document ).ready(function() {
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
                 url="/api/whois/service/ip",
-                sendData={/*"ipaddress":$("#ipl").val()*/},
+                sendData={},
                 callback=function(data, status){$("#ip").html(data['response']);
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
              });
@@ -64,5 +64,5 @@ $( document ).ready(function() {
 
 
 });
-
+/*"ipaddress":$("#ipl").val()*/
 </script>
