@@ -1,0 +1,7 @@
+<form>
+    <field>
+        <id>ip</id>
+        <label>IP</label>
+        <type>text</type>
+    </field>
+</form>

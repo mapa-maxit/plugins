@@ -1,0 +1,9 @@
+<acl>
+   <page-Interfaces-Diagnostics-whois>
+      <name>Services: Whois</name>
+      <patterns>
+         <pattern>ui/whois/*</pattern>
+         <pattern>api/whois/*</pattern>
+      </patterns>
+   </page-Interfaces-Diagnostics-whois>
+</acl>

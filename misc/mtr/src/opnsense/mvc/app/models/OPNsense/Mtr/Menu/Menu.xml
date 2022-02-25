@@ -1,0 +1,7 @@
+<menu>
+  <Interfaces>
+    <Diagnostics>
+      <Whois cssClass="fa fa-random" url="/ui/whois/general/index" />
+    </Diagnostics>
+  </Interfaces>
+</menu>
