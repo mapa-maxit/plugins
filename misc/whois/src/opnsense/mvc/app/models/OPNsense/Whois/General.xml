@@ -3,6 +3,8 @@
     <description>Whois configuration</description>
     <version>0.0.2</version>
     <items>
-
+        <ip Networkfield>
+            <required>N</required>
+        </ip>
     </items>
 </model>
