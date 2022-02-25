@@ -50,7 +50,7 @@ class ServiceController extends ApiMutableServiceControllerBase
       if ($this->request->isPost()) {
         $backend = new Backend();
         $mdlGeneral = new General();
-        $ipaddress = $mdlGeneral->ip;
+        /*$ipaddress = $mdlGeneral->ip;*/
         
         $ipadi = escapeshellarg($this->request->getPost("ip"));
         
