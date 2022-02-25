@@ -57,5 +57,6 @@ class ServiceController extends ApiMutableServiceControllerBase
         $response = $backend->configdRun("whois ip $ipadi");
         return array("response" => $response);
       }
+        return array("response" => array());
     }
 }
