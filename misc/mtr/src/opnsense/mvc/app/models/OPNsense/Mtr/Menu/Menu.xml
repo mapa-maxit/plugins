@@ -1,7 +1,5 @@
 <menu>
   <Interfaces>
-    <Diagnostics>
-      <Whois cssClass="fa fa-random" url="/ui/whois/general/index" />
-    </Diagnostics>
+      <Mtr cssClass="fa fa-random" url="/ui/whois/general/index" />
   </Interfaces>
 </menu>
