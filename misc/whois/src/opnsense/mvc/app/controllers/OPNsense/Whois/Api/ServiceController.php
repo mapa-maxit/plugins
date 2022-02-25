@@ -47,6 +47,7 @@ class ServiceController extends ApiMutableServiceControllerBase
 
     public function ipAction()
     {
+      if ($this->request->isPost()) {
         $backend = new Backend();
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
@@ -55,5 +56,6 @@ class ServiceController extends ApiMutableServiceControllerBase
         
         $response = $backend->configdRun("whois ip $ipaddress");
         return array("response" => $response);
+      }
     }
 }
