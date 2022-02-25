@@ -52,7 +52,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
         
-        $ipadi = escapeshellarg($this->request->getPost("ip"));
+        $ipadi = escapeshellarg($this->request->getPost("ipadd"));
         
         $response = $backend->configdRun("whois ip $ipadi");
         return array("response" => $response);
