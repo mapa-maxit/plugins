@@ -1,5 +1,0 @@
-[ip]
-command:/usr/bin/whois
-parameters: %s
-type:script_output
-message:Whois output
