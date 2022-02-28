@@ -36,7 +36,7 @@ $( document ).ready(function() {
                 ajaxCall(
                 url="/api/mtr/service/ip",
                 sendData={"ipadd":$("#ip").val()},
-                callback=function(data, status){$("#ipl").text(data['response']);
+                callback=function(data, status){$("#ipl").html(data['response']);
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
              });
        });
