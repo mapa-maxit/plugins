@@ -1,5 +1,5 @@
 <menu>
   <Interfaces>
-      <Mtr cssClass="fa fa-random" url="/ui/whois/general/index" />
+      <Mtr cssClass="fa fa-random" url="/ui/mtr/general/index" />
   </Interfaces>
 </menu>
