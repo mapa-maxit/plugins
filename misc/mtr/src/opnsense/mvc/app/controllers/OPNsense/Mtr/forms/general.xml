@@ -12,18 +12,11 @@
     <field>
         <id>j</id>
         <label>ASJSON</label>
-        <type>checkbox
-            <choice label="1">1</choice>
-            <choice label="2">2</choice>
-            <choice label="3">3</choice>
-            <choice label="4">4</choice>
-            <choice label="5">5</choice>
-        </type>
+        <select label="Q1">
+        <title>Are you...</title>
+        <comment>Please select one</comment>
+        <choice label="ch1">Male</choice>
+        <choice label="ch2">Female</choice>
     </field>
-    <select label="Q1">
-    <title>Are you...</title>
-    <comment>Please select one</comment>
-    <choice label="ch1">Male</choice>
-    <choice label="ch2">Female</choice>
 </select>  
 </form>
