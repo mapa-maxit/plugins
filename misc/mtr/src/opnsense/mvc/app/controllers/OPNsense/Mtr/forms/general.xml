@@ -12,6 +12,6 @@
     <field>
         <id>j</id>
         <label>ASJASON</label>
-        <type>boolean</type>
+        <type>booleanfield</type>
     </field>
 </form>
