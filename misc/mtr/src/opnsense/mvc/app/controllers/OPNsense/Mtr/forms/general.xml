@@ -9,5 +9,4 @@
         <label>TURNS</label>
         <type>dropdown</type>
     </field>
-</select>  
 </form>
