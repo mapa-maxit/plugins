@@ -31,7 +31,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
         $ipturns = escapeshellarg($this->request->getPost("ipcount"));
           
-        if($ipturns==1){
+        if($ipturns=="1"){
             $response = $backend->configdRun("mtr ip1 $ipadi");
         }
         return array("response" => $response);
