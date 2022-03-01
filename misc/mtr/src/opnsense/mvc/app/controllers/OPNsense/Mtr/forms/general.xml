@@ -8,15 +8,7 @@
         <id>turn</id>
         <label>TURNS</label>
         <type>dropdown</type>
-    </field>
-    <field>
-        <id>j</id>
-        <label>ASJSON</label>
-        <select label="Q1">
-        <title>Are you...</title>
-        <comment>Please select one</comment>
-        <choice label="ch1">Male</choice>
-        <choice label="ch2">Female</choice>
+        <opt1 value='1'>option1</opt1>
     </field>
 </select>  
 </form>
