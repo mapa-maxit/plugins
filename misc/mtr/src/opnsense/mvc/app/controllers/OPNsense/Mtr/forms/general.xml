@@ -9,4 +9,9 @@
         <label>TURNS</label>
         <type>text</type>
     </field>
+    <field>
+        <id>j</id>
+        <label>ASJASON</label>
+        <type>boolean</type>
+    </field>
 </form>
