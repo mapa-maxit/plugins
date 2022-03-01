@@ -20,4 +20,10 @@
             <choice label="5">5</choice>
         </type>
     </field>
+    <select label="Q1">
+    <title>Are you...</title>
+    <comment>Please select one</comment>
+    <choice label="ch1">Male</choice>
+    <choice label="ch2">Female</choice>
+</select>  
 </form>
