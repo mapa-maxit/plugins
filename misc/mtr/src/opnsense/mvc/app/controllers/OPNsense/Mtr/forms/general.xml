@@ -3,6 +3,7 @@
         <id>ip</id>
         <label>IP</label>
         <type>text</type>
+        <default>TEST</default>
     </field>
     <field>
         <id>turn</id>
