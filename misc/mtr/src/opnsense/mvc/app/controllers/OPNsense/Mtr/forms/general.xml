@@ -4,4 +4,9 @@
         <label>IP</label>
         <type>text</type>
     </field>
+    <field>
+        <id>turn</id>
+        <label>TURNS</label>
+        <type>text</type>
+    </field>
 </form>
