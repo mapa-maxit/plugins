@@ -33,7 +33,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         if($ipturns == "1"){
             $response = $backend->configdRun("mtr ip1 $ipadi");
             return array("response" => $response);
-        }elseif($ipturns == 2){
+        }elseif($ipturns == "2"){
             $response = $backend->configdRun("mtr ip2 $ipadi");
             return array("response" => $response);
         }elseif($ipturns == "3"){
