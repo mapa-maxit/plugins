@@ -12,7 +12,7 @@
     <field>
         <id>jj</id>
         <label>ASJASON</label>
-        <type>checkbox</type>
+        <type>text</type>
     </field>
     <field>
         <id>drl</id>
