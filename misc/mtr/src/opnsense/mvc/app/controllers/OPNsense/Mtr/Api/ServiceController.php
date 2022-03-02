@@ -33,8 +33,13 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipreverse = ($this->request->getPost("iprev"));
         $ipj = ($this->request->getPost("ipjson"));
         if($ipturns == "1"){
+            if($ipj == true){
+                $response = $backend->configdRun("mtr ip1j $ipadi");
+                return array("response" => $response);
+            }else{
             $response = $backend->configdRun("mtr ip1 $ipadi");
             return array("response" => $response);
+            }
         }elseif($ipturns == "2"){
             $response = $backend->configdRun("mtr ip2 $ipadi");
             return array("response" => $response);
