@@ -36,7 +36,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
 
 
         if($ipturns == "1"){
-            if($ipj == "y"){
+            if($ipj == TRUE){
                 $response = $backend->configdRun("mtr ip1j $ipadi");
                 return array("response" => $response);
             }elseif($ipreverse == "y"){
@@ -48,7 +48,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             }
             
         }elseif($ipturns == "2"){
-            if($ipj.isChecked){
+            if($ipj == 1){
                 $response = $backend->configdRun("mtr ip2j $ipadi");
                 return array("response" => $response);
             }elseif($ipreverse == "y"){
