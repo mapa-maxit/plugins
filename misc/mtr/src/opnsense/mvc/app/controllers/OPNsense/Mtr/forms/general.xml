@@ -8,6 +8,10 @@
         <id>turn</id>
         <label>TURNS</label>
         <type>dropdown</type>
-        <option>1</option>
+    </field>
+    <field>
+        <id>j</id>
+        <label>ASJASON</label>
+        <type>checkbox</type>
     </field>
 </form>
