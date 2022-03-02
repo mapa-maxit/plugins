@@ -26,7 +26,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
       if ($this->request->isPost()) {
         $backend = new Backend();
         $mdlGeneral = new General();
-        $ipaddress = $mdlGeneral->ip;
+
         
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
         $ipturns = escapeshellarg($this->request->getPost("ipcount"));
@@ -50,5 +50,8 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             return array("response" => $response);
         }
       }
+    }
+    public function ipJson(){
+        
     }
 }
