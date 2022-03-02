@@ -7,7 +7,7 @@
     <field>
         <id>turn</id>
         <label>TURNS</label>
-        <type>dropdown</type>
+        <type>text</type>
     </field>
     <field>
         <id>j</id>
