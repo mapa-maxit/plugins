@@ -31,11 +31,10 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
         $ipturns = ($this->request->getPost("ipcount"));
         $ipreverse = ($this->request->getPost("iprev"));
-        if($this->request->getPost("ipjson") == true){
-            $ipj = 1;
-        }else{
-            $ipj = 0;
-        }
+        $ipj = ($this->request->getPost("ipjson"));
+  
+
+
         if($ipturns == "1"){
             if($ipj == 1){
                 $response = $backend->configdRun("mtr ip1j $ipadi");
