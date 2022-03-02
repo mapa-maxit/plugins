@@ -36,7 +36,7 @@ $( document ).ready(function() {
               //saveFormToEndpoint(url="/api/mtr/general/set", formid="frm_general_settings",callback_ok=function(){
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
-                url="/api/mtr/service/ip1",
+                url="/api/mtr/service/ip",
                 sendData={"ipcount":$("#turn").val(), "ipadd":$("#ip").val()},
                 callback=function(data, status){$("#ipl").text(data['response']);
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
