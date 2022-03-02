@@ -12,11 +12,11 @@
     <field>
         <id>jj</id>
         <label>ASJASON</label>
-        <type>checkbox</type>
+        <type>text</type>
     </field>
     <field>
         <id>drl</id>
         <label>Disable Reverse Lookup</label>
-        <type>checkbox</type>
+        <type>text</type>
     </field>
 </form>
