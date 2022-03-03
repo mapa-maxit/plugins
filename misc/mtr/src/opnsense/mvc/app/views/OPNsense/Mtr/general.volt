@@ -28,12 +28,12 @@
 <script>
 $( document ).ready(function() {
     var data_get_map = {'frm_general_settings':"/api/mtr/general/get"};
+    var checkbox = document.getElementById("myCheck");
     mapDataToFormUI(data_get_map).done(function(data){
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
     });
              $("#saveAct").click(function(){
-              var checkbox = document.getElementById("myCheck");
               //saveFormToEndpoint(url="/api/mtr/general/set", formid="frm_general_settings",callback_ok=function(){
               if(checkbox.checked == true){
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
