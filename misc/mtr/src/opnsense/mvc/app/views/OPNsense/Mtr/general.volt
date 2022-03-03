@@ -16,6 +16,7 @@
                 <hr />
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Mtr') }}</b> <i id="saveAct_progress"></i></button>
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
         </div>
     <div id="ip" class="tab-pane fade in">
@@ -32,7 +33,6 @@ $( document ).ready(function() {
         $('.selectpicker').selectpicker('refresh');
     });
              $("#saveAct").click(function(){
-              if("#jj".isChecked){
               //saveFormToEndpoint(url="/api/mtr/general/set", formid="frm_general_settings",callback_ok=function(){
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
@@ -40,7 +40,6 @@ $( document ).ready(function() {
                 sendData={"ipadd":$("#ip").val(), "ipcount":$("#turn").val(), "iprev":$("#drl").val(), "ipjson":$("#jj").val()},
                 callback=function(data, status){$("#ipl").text(data['response']);
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
-             });
             });
        });
 
