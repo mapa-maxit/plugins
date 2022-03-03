@@ -36,7 +36,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
 
 
         if($ipturns == "1"){
-            if($_POST['ipjson'] == 'true'){
+            if(isset($_POST['$this->request->getPost("ipjson")'])){
                 $response = $backend->configdRun("mtr ip1j $ipadi");
                 return array("response" => $response);
             }elseif($ipreverse == "y"){
