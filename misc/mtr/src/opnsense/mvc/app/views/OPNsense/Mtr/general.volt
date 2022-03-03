@@ -34,7 +34,7 @@ $( document ).ready(function() {
     });
              $("#saveAct").click(function(){
               //saveFormToEndpoint(url="/api/mtr/general/set", formid="frm_general_settings",callback_ok=function(){
-              if(#testt == true){
+              if("#testt" == true){
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                  ajaxCall(
                  url="/api/mtr/service/ip",
