@@ -15,6 +15,7 @@
             <div class="col-md-12">
                 <hr />
                 <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Mtr') }}</b> <i id="saveAct_progress"></i></button>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
             </div>
         </div>
     <div id="ip" class="tab-pane fade in">
