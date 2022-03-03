@@ -10,7 +10,7 @@
         <type>text</type>
     </field>
     <field>
-        <id>enabled</id>
+        <id>jj</id>
         <label>ASJASON</label>
         <type>checkbox</type>
     </field>
