@@ -13,6 +13,8 @@
         <id>jj</id>
         <label>ASJASON</label>
         <type>checkbox</type>
+        <Required>N</Required>
+        <default>1</default>
     </field>
     <field>
         <id>drl</id>
