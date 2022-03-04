@@ -21,7 +21,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
     protected static $internalServiceEnabled = 'enabled';
     protected static $internalServiceName = 'mtr';
 
-    public function ipAction()
+    public function iAction()
     {
       if ($this->request->isPost()) {
         $backend = new Backend();
