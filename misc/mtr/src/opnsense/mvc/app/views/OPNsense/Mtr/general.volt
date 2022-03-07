@@ -13,10 +13,10 @@
         <div class="content-box" style="padding-bottom: 1.5em;">
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="form-check">
-               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-               <label class="form-check-label" for="flexCheckDefault">
-                 Default checkbox
+               <label class="form-check-label" for="jboo">
+                 JSONBOOL
                </label>
+               <input class="form-check-input" type="checkbox" value="" id="jboo">
              </div>
             <div class="col-md-12">
                 <hr />
