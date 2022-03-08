@@ -23,7 +23,6 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
 
     public function ipAction()
     {
-        if ($this->request->isset()) {
         $backend = new Backend();
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
@@ -35,7 +34,6 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         }else{
             $response = $backend->configdRun("whois $ipaddress");
             return array("response" => $response);
-        }
         }
     }
 }
