@@ -29,8 +29,9 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipenable = $mdlGeneral->enable;
         
         if($ipenable == 1){
-        $response = $backend->configdRun("whois ip $ipaddress");
-        }
-        return array("response" => $response);
+            $response = $backend->configdRun("whois ip $ipaddress");
+            return array("response" => $response);
+        }else{
+            return null
     }
 }
