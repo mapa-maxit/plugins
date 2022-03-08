@@ -23,7 +23,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
 
     public function ipAction()
     {
-        if ($this->request->isSet()) {
+        if ($this->request->isset()) {
         $backend = new Backend();
         $mdlGeneral = new General();
         $ipaddress = $mdlGeneral->ip;
