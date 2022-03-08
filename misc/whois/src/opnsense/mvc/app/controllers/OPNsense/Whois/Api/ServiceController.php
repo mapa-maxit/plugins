@@ -30,7 +30,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         
         $ipadi = escapeshellarg($this->request->getPost("ipadd"));
         
-        $response = $backend->configdRun("ip $ipaddress");
+        $response = $backend->configdRun("whois $ipaddress");
         return array("response" => $response);
       }
     }
