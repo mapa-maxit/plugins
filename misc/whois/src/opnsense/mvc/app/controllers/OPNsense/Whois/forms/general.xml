@@ -4,4 +4,9 @@
         <label>IP</label>
         <type>text</type>
     </field>
+    <field>
+        <id>general.enable</id>
+        <label>ENABLE</label>
+        <type>checkbox</type>
+    </field>
 </form>
