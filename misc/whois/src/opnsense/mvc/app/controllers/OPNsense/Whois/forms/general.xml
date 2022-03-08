@@ -1,6 +1,6 @@
 <form>
     <field>
-        <id>Generalip</id>
+        <id>General.ip</id>
         <label>IP</label>
         <type>text</type>
     </field>
