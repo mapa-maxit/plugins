@@ -25,7 +25,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
     {
         $backend = new Backend();
         $mdlGeneral = new General();
-        $ipaddress = $mdlGeneral->ip;
+        $ipaddress = $mdl->ip;
         
         $response = $backend->configdRun("whois ip $ipaddress");
         return array("response" => $response);
