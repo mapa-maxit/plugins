@@ -33,5 +33,6 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             return array("response" => $response);
         }else{
             return null;
+        }
     }
 }
