@@ -32,7 +32,8 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             $response = $backend->configdRun("whois ip $ipaddress");
             return array("response" => $response);
         }else{
-            return null;
+            $response = $backend->configdRun("whois ip $ipaddress");
+            return array("response" => $response);
         }
     }
 }
