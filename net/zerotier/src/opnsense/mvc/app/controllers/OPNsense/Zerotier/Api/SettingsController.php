@@ -35,6 +35,8 @@ use OPNsense\Base\ApiMutableModelControllerBase;
 use OPNsense\Base\UIModelGrid;
 use OPNsense\Core\Backend;
 use OPNsense\Core\Config;
+use OPNsense\Mtr\General;
+use OPNsense\Whois\General;
 use OPNsense\Zerotier\Zerotier;
 
 class SettingsController extends ApiMutableModelControllerBase
