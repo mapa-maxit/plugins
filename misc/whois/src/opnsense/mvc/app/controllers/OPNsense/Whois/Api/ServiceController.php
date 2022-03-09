@@ -28,9 +28,17 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             $mdlGeneral = new General();
             
             $ipaddress = $mdlGeneral->ip;
+            
+            if(!isset($_POST['$mdlGeneral->enable']))
+                {
+                $checkboxValue = false;
+                } else {
+                     $checkboxValue = true;
+                }
+            
             $ipenable = $mdlGeneral->enable;
 
-            if ($_POST[$ipenable] == "1"){
+            if ($checkboxValue == true){
                 $response = $backend->configdRun("whois ip $ipaddress");
                 return array("response" => $response);
             }
