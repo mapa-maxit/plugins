@@ -33,7 +33,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
                 {
                 $checkboxValue = false;
                 } else {
-                     $checkboxValue = true;
+                $checkboxValue = true;
                 }
             
             $ipenable = $mdlGeneral->enable;
