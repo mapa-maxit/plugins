@@ -5,7 +5,7 @@
         <type>text</type>
     </field>
     <field>
-        <id>general.enable</id>
+        <id>enable</id>
         <label>ENABLE</label>
         <type>checkbox</type>
     </field>
