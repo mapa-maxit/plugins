@@ -7,6 +7,6 @@
     <field>
         <id>general.enable</id>
         <label>ENABLE</label>
-        <type>checkbox</type>
+        <type>text</type>
     </field>
 </form>
