@@ -28,12 +28,15 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipaddress = $mdlGeneral->ip;
         $ipenable = $mdlGeneral->enable;
 
-        if($ipenable == "1"){
-            $response = $backend->configdRun("whois ip $ipaddress");
-            return array("response" => $response);
-        }else{
-            $response = $backend->configdRun("whois $ipaddress");
-            return array("response" => $response);
+
+        if ($this->request->isPost() && $this->request->hasPost("enable")) {
+            $mdlZerotier = $this->getModel();
+            $mdlZerotier->setNodes($this->request->getPost("enable"));
+            $mdlZerotier->serializeToConfig();
+            Config::getInstance()->save();
+            $enabled = isEnabled($mdlZerotier);
+            $result["result"] = $this->toggleZerotierService($enabled);
         }
+        return $result;
     }
 }
