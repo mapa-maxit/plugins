@@ -36,7 +36,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
 
         if($ipturns == "1"){
             if($ipreverse == "1"){
-                $response = $backend->configdRun("mtr ip1j $ipadi");
+                $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
                 $response = $backend->configdRun("mtr ip1 $ipadi");
@@ -45,7 +45,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             
         }elseif($ipturns == "2"){
             if($ipj == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("mtr ip1nj $ipadi");
+                $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
                 $response = $backend->configdRun("mtr ip2 $ipadi");
@@ -54,7 +54,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             
         }elseif($ipturns == "3"){
             if($ipj == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("mtr ip1nj $ipadi");
+                $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
                 $response = $backend->configdRun("mtr ip3 $ipadi");
@@ -63,7 +63,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             
         }elseif($ipturns == "4"){
             if($ipj == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("mtr ip1nj $ipadi");
+                $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
                 $response = $backend->configdRun("mtr ip4 $ipadi");
@@ -72,7 +72,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             
         }elseif($ipturns == "5"){
             if($ipj == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("mtr ip1nj $ipadi");
+                $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
                 $response = $backend->configdRun("mtr ip5 $ipadi");
@@ -81,7 +81,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             
         }else{
             if($ipj == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("mtr ip1nj $ipadi");
+                $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
                 $response = $backend->configdRun("mtr ip1 $ipadi");
