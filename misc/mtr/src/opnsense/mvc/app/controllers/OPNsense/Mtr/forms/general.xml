@@ -10,12 +10,12 @@
         <type>text</type>
     </field>
     <field>
-        <id>jj</id>
+        <id>general.jj</id>
         <label>ASJASON</label>
         <type>checkbox</type>
     </field>
     <field>
-        <id>drl</id>
+        <id>general.drl</id>
         <label>Disable Reverse Lookup</label>
         <type>checkbox</type>
     </field>
