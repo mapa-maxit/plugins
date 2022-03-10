@@ -27,7 +27,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             $backend = new Backend();
             $mdlGeneral = new General();
             
-            $ipenabled = ($this->request->getPost("ipadd")); ;
+            $ipenabled = ($this->request->getPost("ipadd"));
             $ipaddress = $mdlGeneral->ip;
 
             if ($ipenabled == true) {
