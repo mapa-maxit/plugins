@@ -8,7 +8,7 @@
     </ip>
     <enable type="BooleanField">
       <Required>Y</Required>
-      <default>true</default>
+      <default>1</default>
     </enable>
     </items>
 </model>
