@@ -8,6 +8,6 @@
         <id>general.enabled</id>
         <label>ENABLE</label>
         <type>checkbox</type>
-        <default>true</default>
+        <default>1</default>
     </field>
 </form>
