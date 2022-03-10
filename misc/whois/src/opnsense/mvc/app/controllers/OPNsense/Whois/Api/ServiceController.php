@@ -30,7 +30,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             $ipenable = $mdlGeneral->enable;
             $ipaddress = $mdlGeneral->ip;
 
-            if (isset($config['whois']['enable'])) {
+            if (isset($config['ip']['enable'])) {
                 $response = $backend->configdRun("whois ip $ipaddress");
                 return array("response" => $response);
             }
