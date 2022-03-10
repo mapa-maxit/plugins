@@ -7,4 +7,9 @@
       <Required>N</Required>
     </ip>
     </items>
+  <items>
+    <enable type="BooleanField">
+      <Required>N</Required>
+    </enable>
+    </items>
 </model>
