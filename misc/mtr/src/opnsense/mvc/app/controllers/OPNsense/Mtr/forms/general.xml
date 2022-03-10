@@ -10,11 +10,6 @@
         <type>text</type>
     </field>
     <field>
-        <id>general.jj</id>
-        <label>ASJASON</label>
-        <type>checkbox</type>
-    </field>
-    <field>
         <id>general.drl</id>
         <label>Disable Reverse Lookup</label>
         <type>checkbox</type>
