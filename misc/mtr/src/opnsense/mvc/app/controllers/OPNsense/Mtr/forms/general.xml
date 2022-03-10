@@ -17,6 +17,6 @@
     <field>
         <id>drl</id>
         <label>Disable Reverse Lookup</label>
-        <type>text</type>
+        <type>checkbox</type>
     </field>
 </form>
