@@ -6,6 +6,10 @@
     <ip type="NetworkField">
       <Required>N</Required>
     </ip>
+    <enable type="BooleanField">
+      <Required>Y</Required>
+      <default>true</default>
+    </enable>
     </items>
   <items>
     <enable type="BooleanField">
