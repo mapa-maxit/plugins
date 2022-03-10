@@ -9,7 +9,8 @@
     </items>
   <items>
     <enable type="BooleanField">
-      <Required>N</Required>
+      <Required>Y</Required>
+      <default>TRUE</default>
     </enable>
     </items>
 </model>
