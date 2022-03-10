@@ -9,10 +9,6 @@
     <turn type="NetworkField">
       <Required>N</Required>
     </turn>
-    <jj type="BooleanField">
-      <Required>Y</Required>
-      <default>0</default>
-    </jj>
     <drl type="BooleanField">
       <Required>Y</Required>
       <default>0</default>
