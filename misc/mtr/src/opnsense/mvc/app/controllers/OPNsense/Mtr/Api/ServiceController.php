@@ -30,8 +30,8 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
         $ipturns = ($this->request->getPost("ipcount"));
-        $ipreverse = $this->request->getPost("ipj");
-        $ipj = $this->request->getPost("iprevers");
+        $ipreverse = ($this->request->getPost("ipj"));
+        $ipj = ($this->request->getPost("iprevers"));
   
 
 
