@@ -6,7 +6,7 @@
     </field>
     <field>
         <id>turn</id>
-        <label>TURNS</label>
+        <label>Turns</label>
         <type>text</type>
     </field>
     <field>
