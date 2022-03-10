@@ -1,11 +1,11 @@
 <form>
     <field>
-        <id>ip</id>
+        <id>general.ip</id>
         <label>IP</label>
         <type>text</type>
     </field>
     <field>
-        <id>turn</id>
+        <id>general.turn</id>
         <label>TURNS</label>
         <type>text</type>
     </field>
