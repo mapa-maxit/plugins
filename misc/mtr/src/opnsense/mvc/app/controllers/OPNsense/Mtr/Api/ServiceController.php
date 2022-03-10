@@ -44,7 +44,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             }
             
         }elseif($ipturns == "2"){
-            if($ipj == "1" && $ipreverse == "1"){
+            if($ipreverse == "1" && $ipreverse == "1"){
                 $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
@@ -53,7 +53,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             }
             
         }elseif($ipturns == "3"){
-            if($ipj == "1" && $ipreverse == "1"){
+            if($ipreverse == "1" && $ipreverse == "1"){
                 $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
@@ -62,7 +62,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             }
             
         }elseif($ipturns == "4"){
-            if($ipj == "1" && $ipreverse == "1"){
+            if($ipreverse == "1" && $ipreverse == "1"){
                 $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
@@ -71,7 +71,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             }
             
         }elseif($ipturns == "5"){
-            if($ipj == "1" && $ipreverse == "1"){
+            if($ipreverse == "1" && $ipreverse == "1"){
                 $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
@@ -80,7 +80,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             }
             
         }else{
-            if($ipj == "1" && $ipreverse == "1"){
+            if($ipreverse == "1" && $ipreverse == "1"){
                 $response = $backend->configdRun("mtr ip1n $ipadi");
                 return array("response" => $response);
             }else{
