@@ -11,10 +11,4 @@
       <default>true</default>
     </enable>
     </items>
-  <items>
-    <enable type="BooleanField">
-      <Required>Y</Required>
-      <default>true</default>
-    </enable>
-    </items>
 </model>
