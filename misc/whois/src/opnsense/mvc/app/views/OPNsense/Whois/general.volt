@@ -35,7 +35,7 @@ $( document ).ready(function() {
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                 ajaxCall(
                 url="/api/whois/service/ip",
-                sendData={},
+                sendData={"ipadd":$("#enabled").val()},
                 callback=function(data, status){$("#ipl").text(data['response']);
                  $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");
              });
