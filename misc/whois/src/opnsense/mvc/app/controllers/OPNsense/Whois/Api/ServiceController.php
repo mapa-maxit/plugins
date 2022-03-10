@@ -27,13 +27,10 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
             $backend = new Backend();
             $mdlGeneral = new General();
             
-            $ipenabled = $mdlGeneral->enabled;
             $ipaddress = $mdlGeneral->ip;
 
-            if ($ipenabled == "1") {
                 $response = $backend->configdRun("whois ip $ipaddress");
                 return array("response" => $response);
-            }
         }
     }
 }
