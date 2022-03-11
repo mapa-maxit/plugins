@@ -33,7 +33,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipreverse = $mdlGeneral->drl;
           
           
-        if($ipturns == "Pingscan && $ipreverse == "1"){
+        if($ipturns == "Pingscan" && $ipreverse == "1"){
         $response = $backend->configdRun("nmap ip $ipadi");
         return array("response" => $response);
         
