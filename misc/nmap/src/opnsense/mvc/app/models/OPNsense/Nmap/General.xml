@@ -13,7 +13,7 @@
                 <OptionValues>
                         <Pingscan>Pingscan</Pingscan>
                         <SYNScan>SYNScan</SYNScan>
-                        <UDPscan>UDP Scan</UDPscan>
+                        <UDPscan>UDPscan</UDPscan>
                 </OptionValues>
     </turn>
     <drl type="BooleanField">
