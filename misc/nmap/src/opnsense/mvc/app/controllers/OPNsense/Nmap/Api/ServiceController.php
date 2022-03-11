@@ -29,7 +29,8 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController
 
         
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
-        $ipran = ($this->request->getPost("iprange")); 
+        $ipran = ($this->request->getPost("iprange"));
+        $ipran2 = escapeshellarg($this->request->getPost("iprange"));
         $ipturns = $mdlGeneral->turn;
         $ipreverse = $mdlGeneral->drl;
         $ipver = $mdlGeneral->ver;
@@ -85,7 +86,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController
             }
         }else{
              if($ipturns == "Pingscan" && $ipreverse == "1" && $ipver == "1"){
-                $response = $backend->configdRun("nmap ip11 $ipadi");
+                $response = $backend->configdRun("nmap ip11 $ipadi $ipran2");
                 return array("response" => $response);
 
             }elseif($ipturns == "SYNScan" && $ipreverse == "1" && $ipver == "1"){
