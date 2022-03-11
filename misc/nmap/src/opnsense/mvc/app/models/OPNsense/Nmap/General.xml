@@ -11,8 +11,8 @@
                 <multiple>Y</multiple>
                 <default></default>
                 <OptionValues>
-                        <Pingscan>Option1(Pingscan)</Pingscan>
-                        <SYNScan>Option2(SYNScan)</SYNScan>
+                        <Pingscan>Pingscan</Pingscan>
+                        <SYNScan>SYNScan</SYNScan>
                 </OptionValues>
     </turn>
     <drl type="BooleanField">
