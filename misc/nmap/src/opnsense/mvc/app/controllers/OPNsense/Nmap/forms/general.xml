@@ -6,7 +6,7 @@
     </field>
     <field>
         <id>general.turn</id>
-        <label>Choose</label>
+        <label>ScanType</label>
         <type>dropdown</type>
     </field>
     <field>
