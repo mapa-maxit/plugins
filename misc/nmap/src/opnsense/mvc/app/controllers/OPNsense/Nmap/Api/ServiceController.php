@@ -29,7 +29,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
 
         
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
-        $ipturns = ($this->request->getPost("ipcount"));
+        $ipturns = $mdlGeneral->turn;
         $ipreverse = $mdlGeneral->drl;
           
           
