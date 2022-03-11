@@ -6,12 +6,12 @@
     </field>
     <field>
         <id>turn</id>
-        <label>Turns</label>
-        <type>text</type>
+        <label>Choose</label>
+        <type>dropdown</type>
     </field>
     <field>
         <id>general.drl</id>
-        <label>Disable Reverse Lookup</label>
+        <label>Show only open ports</label>
         <type>checkbox</type>
     </field>
 </form>
