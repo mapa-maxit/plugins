@@ -14,7 +14,7 @@
             {{ partial("layout_partials/base_form",['fields':generalForm,'id':'frm_general_settings'])}}
             <div class="col-md-12">
                 <hr />
-                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Nmap') }}</b> <i id="saveAct_progress"></i></button>
+                <button class="btn btn-primary" id="saveAct" type="button"><b>{{ lang._('Mtr') }}</b> <i id="saveAct_progress"></i></button>
             </div>
         </div>
     <div id="ip" class="tab-pane fade in">
@@ -25,16 +25,16 @@
 
 <script>
 $( document ).ready(function() {
-    var data_get_map = {'frm_general_settings':"/api/nmap/general/get"};
+    var data_get_map = {'frm_general_settings':"/api/mtr/general/get"};
     mapDataToFormUI(data_get_map).done(function(data){
         formatTokenizersUI();
         $('.selectpicker').selectpicker('refresh');
     });
              $("#saveAct").click(function(){
-              saveFormToEndpoint(url="/api/nmap/general/set", formid="frm_general_settings",callback_ok=function(){
+              saveFormToEndpoint(url="/api/mtr/general/set", formid="frm_general_settings",callback_ok=function(){
               $("#saveAct_progress").addClass("fa fa-spinner fa-pulse");
                  ajaxCall(
-                 url="/api/nmap/service/ip",
+                 url="/api/mtr/service/ip",
                  sendData={"ipadd":$("#ip").val(), "ipcount":$("#turn").val()},
                  callback=function(data, status){$("#ipl").text(data['response']);
                   $("#saveAct_progress").removeClass("fa fa-spinner fa-pulse");

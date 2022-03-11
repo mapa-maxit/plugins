@@ -5,12 +5,12 @@
  * All rights reserved.
  */
 
-namespace OPNsense\Nmap\Api;
+namespace OPNsense\Mtr\Api;
 
 use OPNsense\Base\ApiMutableModelControllerBase;
 
 class GeneralController extends ApiMutableModelControllerBase
 {
-    protected static $internalModelClass = '\OPNsense\Nmap\General';
+    protected static $internalModelClass = '\OPNsense\Mtr\General';
     protected static $internalModelName = 'general';
 }
