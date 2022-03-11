@@ -32,7 +32,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipturns = ($this->request->getPost("ipcount"));
         $ipreverse = $mdlGeneral->drl;
 
-        $response = $backend->configdRun("nmap ip $ipadi");
+        $response = $backend->configdRun("whois ip $ipadi");
         return array("response" => $response);
         }
     }
