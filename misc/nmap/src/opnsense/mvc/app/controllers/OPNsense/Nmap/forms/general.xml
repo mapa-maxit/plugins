@@ -5,7 +5,7 @@
         <type>text</type>
     </field>
     <field>
-        <id>nmap.turn</id>
+        <id>general.turn</id>
         <label>Choose</label>
         <type>dropdown</type>
     </field>
