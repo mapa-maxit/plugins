@@ -31,9 +31,24 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
         $ipturns = ($this->request->getPost("ipcount"));
         $ipreverse = $mdlGeneral->drl;
-
+          
+          
+        if($ipturns == "Pingscan && $ipreverse == "1"){
         $response = $backend->configdRun("nmap ip $ipadi");
         return array("response" => $response);
+        
+        }elseif($ipturns == "SYNScan" && $ipreverse == "1"){
+        $response = $backend->configdRun("nmap ip $ipadi");
+        return array("response" => $response);
+
+        }elseif($ipturns == "SYNScan"){
+        $response = $backend->configdRun("nmap ip $ipadi");
+        return array("response" => $response);
+
+        }elseif($ipturns == "Pingscan"){
+        $response = $backend->configdRun("nmap ip $ipadi");
+        return array("response" => $response);
+            	}
         }
     }
 }
