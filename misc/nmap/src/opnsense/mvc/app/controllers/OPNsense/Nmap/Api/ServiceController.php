@@ -31,6 +31,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipadi = escapeshellarg($this->request->getPost("ipadd")); 
         $ipturns = ($this->request->getPost("ipcount"));
         $ipreverse = $mdlGeneral->drl;
+<<<<<<< HEAD
   
 
 
@@ -88,6 +89,11 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
                 return array("response" => $response);
             }
         }
+=======
+          
+        $response = $backend->configdRun("nmap ip $ipadi");
+        return array("response" => $response);
+>>>>>>> 7946c9663e14e026d7e28301e2b16325a726f005
       }
     }
 }
