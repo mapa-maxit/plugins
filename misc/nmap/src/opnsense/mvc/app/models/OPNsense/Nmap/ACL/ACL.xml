@@ -1,5 +1,5 @@
 <acl>
-   <page-Interfaces-Diagnostics-mtr>
+   <page-Interfaces-Diagnostics-nmap>
       <name>Services: Nmap</name>
       <patterns>
          <pattern>ui/nmap/*</pattern>
