@@ -14,7 +14,7 @@ use OPNsense\Nmap\General;
  * Class ServiceController
  * @package OPNsense\Nmap
  */
-class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutableServiceControllerBase*/
+class ServiceController extends \OPNsense\Proxy\Api\ServiceController
 {
     protected static $internalServiceClass = '\OPNsense\Nmap\General';
     protected static $internalServiceTemplate = 'OPNsense/Nmap';
