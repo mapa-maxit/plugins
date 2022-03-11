@@ -6,13 +6,13 @@
  * All rights reserved.
  */
 
-namespace OPNsense\Mtr;
+namespace OPNsense\Nmap;
 
 class GeneralController extends \OPNsense\Base\IndexController
 {
     public function indexAction()
     {
         $this->view->generalForm = $this->getForm("general");
-        $this->view->pick('OPNsense/Mtr/general');
+        $this->view->pick('OPNsense/Nmap/general');
     }
 }
