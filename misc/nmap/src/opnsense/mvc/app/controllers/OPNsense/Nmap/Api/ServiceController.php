@@ -137,4 +137,5 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController
         }
     }
 }
+}
 ?>
