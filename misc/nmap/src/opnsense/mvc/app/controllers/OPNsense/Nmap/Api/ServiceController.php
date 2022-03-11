@@ -71,8 +71,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController
             
         }elseif($ipturns == "Pingscan"){
             $response = $backend->configdRun("nmap ip4 $ipadi");
-            return array("response" => $response);
-            	}        
+            return array("response" => $response);  
 
         }elseif($ipturns == "SYNScan"){
             $response = $backend->configdRun("nmap ip3 $ipadi");
