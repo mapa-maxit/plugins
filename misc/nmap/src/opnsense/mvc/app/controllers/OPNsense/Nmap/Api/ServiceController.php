@@ -80,6 +80,7 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController
         }elseif($ipturns == "UDPscan"){
             $response = $backend->configdRun("nmap ip5 $ipadi");
             return array("response" => $response);
+        }
             
         }
     }
