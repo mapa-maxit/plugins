@@ -1,0 +1,17 @@
+<form>
+    <field>
+        <id>ip</id>
+        <label>IP</label>
+        <type>text</type>
+    </field>
+    <field>
+        <id>turn</id>
+        <label>Turns</label>
+        <type>text</type>
+    </field>
+    <field>
+        <id>general.drl</id>
+        <label>Disable Reverse Lookup</label>
+        <type>checkbox</type>
+    </field>
+</form>
