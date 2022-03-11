@@ -7,7 +7,7 @@
     <field>
         <id>nmap.turn</id>
         <label>Choose</label>
-        <type>select_multiple</type>
+        <type>dropdown</type>
     </field>
     <field>
         <id>general.drl</id>
