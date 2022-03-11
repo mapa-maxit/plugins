@@ -1,9 +1,0 @@
-<acl>
-   <page-Interfaces-Diagnostics-mtr>
-      <name>Services: Mtr</name>
-      <patterns>
-         <pattern>ui/mtr/*</pattern>
-         <pattern>api/mtr/*</pattern>
-      </patterns>
-   </page-Interfaces-Diagnostics-mtr>
-</acl>

@@ -1,7 +1,0 @@
-<menu>
-  <Interfaces>
-    <Diagnostics>
-      <Mtr cssClass="fa fa-random" url="/ui/mtr/general/index" />
-    </Diagnostics>
-  </Interfaces>
-</menu>
