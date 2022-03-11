@@ -5,6 +5,11 @@
         <type>text</type>
     </field>
     <field>
+        <id>range</id>
+        <label>IpRange</label>
+        <type>text</type>
+    </field>
+    <field>
         <id>general.turn</id>
         <label>ScanType</label>
         <type>dropdown</type>
