@@ -83,7 +83,55 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController
                 $response = $backend->configdRun("nmap ip5 $ipadi");
                 return array("response" => $response);
             }
-        }
+        }else{
+             if($ipturns == "Pingscan" && $ipreverse == "1" && $ipver == "1"){
+                $response = $backend->configdRun("nmap ip11 1:100 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "SYNScan" && $ipreverse == "1" && $ipver == "1"){
+                $response = $backend->configdRun("nmap ip10 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "UDPscan" && $ipreverse == "1" && $ipver == "1"){
+                $response = $backend->configdRun("nmap ip12 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "Pingscan" && $ipreverse == "1"){
+                $response = $backend->configdRun("nmap ip1 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "SYNScan" && $ipreverse == "1"){
+                $response = $backend->configdRun("nmap ip2 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "UDPscan" && $ipreverse == "1"){
+                $response = $backend->configdRun("nmap ip6 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "Pingscan" && $ipver == "1"){
+                $response = $backend->configdRun("nmap ip8 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "SYNScan" && $ipver == "1"){
+                $response = $backend->configdRun("nmap ip7 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "UDPscan" && $ipver == "1"){
+                $response = $backend->configdRun("nmap ip9 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "Pingscan"){
+                $response = $backend->configdRun("nmap ip4 $ipadi");
+                return array("response" => $response);  
+
+            }elseif($ipturns == "SYNScan"){
+                $response = $backend->configdRun("nmap ip3 $ipadi");
+                return array("response" => $response);
+
+            }elseif($ipturns == "UDPscan"){
+                $response = $backend->configdRun("nmap ip5 $ipadi");
+                return array("response" => $response);
+            }
             
         }
     }
