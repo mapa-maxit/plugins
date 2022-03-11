@@ -6,6 +6,9 @@
     <ip type="NetworkField">
       <Required>N</Required>
     </ip>
+    <range type="NetworkField">
+      <Required>N</Required>
+    </range>
     <turn type="OptionField">
                 <Required>N</Required>
                 <multiple>Y</multiple>
