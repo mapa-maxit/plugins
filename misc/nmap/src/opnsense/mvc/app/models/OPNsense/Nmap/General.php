@@ -5,7 +5,7 @@
  * All rights reserved.
  */
 
-namespace OPNsense\Mtr;
+namespace OPNsense\Nmap;
 
 use OPNsense\Base\BaseModel;
 
