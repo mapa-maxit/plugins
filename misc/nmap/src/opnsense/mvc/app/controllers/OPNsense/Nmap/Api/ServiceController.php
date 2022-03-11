@@ -32,62 +32,9 @@ class ServiceController extends \OPNsense\Proxy\Api\ServiceController /*ApiMutab
         $ipturns = ($this->request->getPost("ipcount"));
         $ipreverse = $mdlGeneral->drl;
   
+        $response = $backend->configdRun("nmap ip $ipadi");
+        return array("response" => $response);
 
-
-        if($ipturns == "1"){
-            if($ipreverse == "1"){
-                $response = $backend->configdRun("nmap ip1n $ipadi");
-                return array("response" => $response);
-            }else{
-                $response = $backend->configdRun("nmap ip1 $ipadi");
-                return array("response" => $response);
-            }
-            
-        }elseif($ipturns == "2"){
-            if($ipreverse == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("nmap ip1n $ipadi");
-                return array("response" => $response);
-            }else{
-                $response = $backend->configdRun("nmap ip2 $ipadi");
-                return array("response" => $response);
-            }
-            
-        }elseif($ipturns == "3"){
-            if($ipreverse == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("nmap ip1n $ipadi");
-                return array("response" => $response);
-            }else{
-                $response = $backend->configdRun("nmap ip3 $ipadi");
-                return array("response" => $response);
-            }
-            
-        }elseif($ipturns == "4"){
-            if($ipreverse == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("nmap ip1n $ipadi");
-                return array("response" => $response);
-            }else{
-                $response = $backend->configdRun("nmap ip4 $ipadi");
-                return array("response" => $response);
-            }
-            
-        }elseif($ipturns == "5"){
-            if($ipreverse == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("nmap ip1n $ipadi");
-                return array("response" => $response);
-            }else{
-                $response = $backend->configdRun("nmap ip5 $ipadi");
-                return array("response" => $response);
-            }
-            
-        }else{
-            if($ipreverse == "1" && $ipreverse == "1"){
-                $response = $backend->configdRun("nmap ip1n $ipadi");
-                return array("response" => $response);
-            }else{
-                $response = $backend->configdRun("nmap ip1 $ipadi");
-                return array("response" => $response);
-            }
-        }
       }
     }
 }
